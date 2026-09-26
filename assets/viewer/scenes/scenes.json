@@ -1,0 +1,87 @@
+{
+  "default": "fr3",
+  "allowed": [
+    "fr3",
+    "kitchen1",
+    "scannetpp",
+    "room2",
+    "office0"
+  ],
+  "scenes": {
+    "fr3": {
+      "content": "scenes/fr3.sog",
+      "position": [
+        1.037699797739653,
+        0.7667778007344344,
+        5.8964858543865395
+      ],
+      "target": [
+        -0.9498441056592322,
+        -2.6648010655208894,
+        1.130571910898706
+      ],
+      "fov": 55,
+      "_note": "Derived from training_eligsir.json frame 75/225 (img_name=1341847980... actually 1341848009.878688), a real captured camera pose ~1/3 into the trajectory. Look-ahead distance 4.0m (clipped from scene bbox diagonal), camera position pulled back an additional 55% of that distance (2.2m) beyond the real pose for more context (iteration 2: supervisor feedback said the first pass -- 30% pullback -- was still a touch too tight; increased to 55%.) Target unchanged from the original derivation. Position/target rotated 180deg about Z ((x,y,z)->(-x,-y,z)) to match the fixed entity.setLocalEulerAngles(0,0,180) every gsplat entity gets in this viewer's loader (world up is -Y in the raw trajectory frame; this flip converts to the +Y-up the fixed-roll viewer camera assumes -- verified via mean camera 'down' vector per scene)."
+    },
+    "kitchen1": {
+      "content": "scenes/kitchen1.sog",
+      "position": [
+        -0.07117997408538235,
+        0.5166577922261262,
+        -1.0264288415961722
+      ],
+      "target": [
+        -2.8162388475778686,
+        -0.8441083173211072,
+        0.008616529430289233
+      ],
+      "fov": 55,
+      "_note": "Derived from training_eligsir.json frame 68/204 (img_name=000689), a real captured camera pose ~1/3 into the trajectory. Position pulled back ~30% beyond that pose along its view direction for context (look distance 2.49m derived from the scene's bbox diagonal in scene_bounds.json, clipped to [1.5, 4.0]m). Both position and target are then rotated 180deg about Z ((x,y,z) -> (-x,-y,z)) to match the fixed entity.setLocalEulerAngles(0,0,180) applied to every gsplat entity by this viewer's loader (office.html:94227) -- the source camera-trajectory export is in the reconstruction's raw camera-initialized frame (verified: mean camera 'down' vector for every scene is ~(0,+1,0), i.e. world up is -Y there, not the +Y the fixed-roll viewer camera assumes), and this same 180deg-about-Z flip is what the shipped office.html example relies on to render right-side up, so applying it here keeps the camera consistent with the splat geometry's actual on-screen orientation without needing a separate up-vector override (the viewer's camera schema has no explicit 'up' field)."
+    },
+    "scannetpp": {
+      "content": "scenes/scannetpp.sog",
+      "position": [
+        -0.5009247997071709,
+        1.697018918867394,
+        3.5751598098623254
+      ],
+      "target": [
+        -3.058163664524584,
+        0.573840698637192,
+        3.77264417346578
+      ],
+      "fov": 65,
+      "_note": "Iteration 4 (previous passes were overexposed/white or landed inside a floater blob: frame 76 and a synthetic bbox-diagonal framing both put the camera against/inside geometry near the boundary of the reconstructed volume, which is noisy for this ScanNet++ scan). Switched to training_eligsir.json frame 90/228 (img_name=3291.468060), picked because its forward vector is close to horizontal (not staring at floor/ceiling) and its native, un-extrapolated camera position already sits cleanly inside the reconstructed office interior (visible: desk, chair, radiator, windows). Camera pulled back only 0.3m (12% of the 2.5m look-ahead) from that real pose -- deliberately small, since any larger offset for this scene pushes the camera into unclean boundary geometry -- with fov widened to 65 for a bit more context. Position/target rotated 180deg about Z to match the fixed gsplat entity rotation (see fr3's note)."
+    },
+    "room2": {
+      "content": "scenes/room2.sog",
+      "position": [
+        -3.729751926676203,
+        -0.09168300226574899,
+        -1.6544560771130694
+      ],
+      "target": [
+        -0.7614770913223987,
+        -1.5051521843128481,
+        -0.5373234490731134
+      ],
+      "fov": 55,
+      "_note": "Derived from training_eligsir.json frame 75/225 (img_name=000669), a real captured camera pose ~1/3 into the trajectory. Position pulled back ~30% beyond that pose along its view direction for context (look distance 2.67m derived from the scene's bbox diagonal in scene_bounds.json, clipped to [1.5, 4.0]m). Both position and target are then rotated 180deg about Z ((x,y,z) -> (-x,-y,z)) to match the fixed entity.setLocalEulerAngles(0,0,180) applied to every gsplat entity by this viewer's loader (office.html:94227) -- the source camera-trajectory export is in the reconstruction's raw camera-initialized frame (verified: mean camera 'down' vector for every scene is ~(0,+1,0), i.e. world up is -Y there, not the +Y the fixed-roll viewer camera assumes), and this same 180deg-about-Z flip is what the shipped office.html example relies on to render right-side up, so applying it here keeps the camera consistent with the splat geometry's actual on-screen orientation without needing a separate up-vector override (the viewer's camera schema has no explicit 'up' field)."
+    },
+    "office0": {
+      "content": "scenes/office0.sog",
+      "position": [
+        -0.9807602668675928,
+        1.4351890485580592,
+        -0.523244976470453
+      ],
+      "target": [
+        2.2932866849372147,
+        -1.7003351183543565,
+        -1.5584284172604668
+      ],
+      "fov": 78,
+      "_note": "Iteration 3 (previous two passes put the camera too close -- a sofa filled the whole frame, per supervisor screenshot review; a bbox-center-framing attempt and a different trajectory frame both put the camera into an unclean ceiling/wall floater blob just outside the reconstructed room). Settled on training_eligsir.json frame 75/225 (img_name=000669, same real pose as before), target 3.0m ahead, camera pulled back an extra 55% of that (1.65m) -- moderate, not the earlier aggressive bbox-diagonal-scaled pullback -- plus a wider fov (78 vs 55) to fit more of the room without moving into unreconstructed space beyond the real trajectory's neighbourhood. Position/target rotated 180deg about Z to match the fixed gsplat entity rotation (see fr3's note)."
+    }
+  }
+}

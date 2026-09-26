@@ -1,0 +1,48 @@
+name: Deploy static site to GitHub Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Stage publication files
+        id: stage
+        shell: bash
+        run: |
+          set -euo pipefail
+          staging_dir="${RUNNER_TEMP}/pages-site"
+          rm -rf "$staging_dir"
+          mkdir -p "$staging_dir/data" "$staging_dir/assets"
+          cp index.html styles.css app.js .nojekyll THIRD_PARTY.md "$staging_dir/"
+          cp -R data/. "$staging_dir/data/"
+          cp -R assets/. "$staging_dir/assets/"
+          printf 'path=%s\n' "$staging_dir" >> "$GITHUB_OUTPUT"
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ steps.stage.outputs.path }}
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

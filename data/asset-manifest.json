@@ -1,0 +1,481 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "path": "assets/brand/logo-dark.svg",
+      "role": "Brand",
+      "notes": "Supplied outlined Alexandrite lockup; no font file required.",
+      "bytes": 4145,
+      "sha256": "08cd2a372e7b6fa1e94accfb41c8a026631111fc650a81462c6802944dede1c5"
+    },
+    {
+      "path": "assets/brand/logo-light.svg",
+      "role": "Brand",
+      "notes": "Supplied outlined Alexandrite lockup; no font file required.",
+      "bytes": 4145,
+      "sha256": "f350594c7ee2fff4656462a21898bf28442c9093fc48d66c3386c9dd34531001"
+    },
+    {
+      "path": "assets/brand/mark.svg",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 368,
+      "sha256": "5b1dd9b8142110324a835e20aad9406ab624424d55afb217fea8804ee6ec32cb"
+    },
+    {
+      "path": "assets/data/release.json",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 679,
+      "sha256": "e1f1e9236c50fd2818cca72ac071fc9c03762b302c3f847cac389c2d16c7c91c"
+    },
+    {
+      "path": "assets/data/results.json",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 7372,
+      "sha256": "284c442fd18d9bb11628b0d865efc85818e68e1f216630bbc82b0d707395f0e5"
+    },
+    {
+      "path": "assets/paper/eligsir-anonymous.pdf",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 1291980,
+      "sha256": "6cbd175c626e6b9a07921d16ca44d3a148363cf115fa5140e2f2e70b29cdbefa"
+    },
+    {
+      "path": "assets/paper-figures/fig1-teaser.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 204682,
+      "sha256": "5fef719c77a2997bc1e7e450de2e586f9efcef926f7d278006922a5fa6f84d73"
+    },
+    {
+      "path": "assets/paper-figures/fig2-method.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 175080,
+      "sha256": "d5ca3f94a3018f1570ef66791c891e8dc4c38d1373d8b917c1883f9dbb0ed0d7"
+    },
+    {
+      "path": "assets/paper-figures/fig3-psnr-vs-rtf.svg",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 85409,
+      "sha256": "6c7155d543c41867a6dba0caf0f483cd6a16b29b244396a37e53eb64275e03da"
+    },
+    {
+      "path": "assets/paper-figures/fig3-psnr-vs-rtf.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 52102,
+      "sha256": "5ff7dd579b08668dd445c90d97740ab5c00a7bfa2ca44666afea17b123c2d259"
+    },
+    {
+      "path": "assets/paper-figures/fig4-cvq.svg",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 78340,
+      "sha256": "edb32d7a41c22fdcebd45625402f87fd31a3dc03a7a6cb2ad1a6006da7fc39c5"
+    },
+    {
+      "path": "assets/paper-figures/fig4-cvq.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 42350,
+      "sha256": "cd94c0545ca9aba90495c94ba2548d5c982f56b1e0b3e5bdcb772934fd26276a"
+    },
+    {
+      "path": "assets/paper-figures/fig5-scheduling.svg",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 183084,
+      "sha256": "f13f813606c8891ba8d10003080a7a9a68c2f558002d9636d35102c945a25aa4"
+    },
+    {
+      "path": "assets/paper-figures/fig5-scheduling.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 57090,
+      "sha256": "84c8c50799514a365011ad9631e03af7e1ceeb213d47133d9f6cee4b805aa401"
+    },
+    {
+      "path": "assets/paper-figures/fig6-fidelity.svg",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 107876,
+      "sha256": "c47069da2789fba6f518601937f632ba36ebbc0575cd6f943329009706c2d83d"
+    },
+    {
+      "path": "assets/paper-figures/fig6-fidelity.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 99210,
+      "sha256": "cd6fb43f4cb28b7c077030991cace4c40e8c956a3eeb4562f7131395ab929e33"
+    },
+    {
+      "path": "assets/paper-figures/fig8-qualitative.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 128008,
+      "sha256": "e1f7e143aaa7b5c86ef60aca2cc89d17f72dff5da86997fe472b7b90f5052cf3"
+    },
+    {
+      "path": "assets/qualitative/depth-colorbar-0.3-5m.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 744,
+      "sha256": "5107e88b8c504bfff93e8c63b1ddef650bba2892466bddbc0617f7fbe9895845"
+    },
+    {
+      "path": "assets/qualitative/fr3-1152-cartgs-depth.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 14726,
+      "sha256": "60a56f2d89daa8c8b30f41f0b2e736f19fbaf36527a97c84b63a12ccee531507"
+    },
+    {
+      "path": "assets/qualitative/fr3-1152-cartgs-rgb.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 27990,
+      "sha256": "5b596186c1b2e356f5b0915dbf39fc4970a196a3f63c6dff66c3c903cbd21ffb"
+    },
+    {
+      "path": "assets/qualitative/fr3-1152-eligsir-depth.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 12928,
+      "sha256": "5d2b75acea504bbfeb8527af2590988ff6fd0a1353c4bc0ee7d0c02bd0b9f5b4"
+    },
+    {
+      "path": "assets/qualitative/fr3-1152-eligsir-rgb.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 28440,
+      "sha256": "b4e34d8aa8f092b81bc44f54f16a3aa13f99aa409ffec5e0c7ec466e168e9501"
+    },
+    {
+      "path": "assets/qualitative/fr3-1152-reference-depth.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 18356,
+      "sha256": "cb53e58d4f12eafaad187662bf1ad4eeb525b35ba44ac6924d68c4d354a320f4"
+    },
+    {
+      "path": "assets/qualitative/fr3-1152-reference-rgb.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 39780,
+      "sha256": "56a2ca38f2e5ef4b11eaf38dced178fd5942e1de592c5c3d90c1918e02ac7283"
+    },
+    {
+      "path": "assets/qualitative/kitchen1-865-cartgs-depth.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 9152,
+      "sha256": "f9f17d1cfd7ac42f46df2ce31e21a9efa48b52c99b201974d234d9bcbcecd4c9"
+    },
+    {
+      "path": "assets/qualitative/kitchen1-865-cartgs-rgb.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 22582,
+      "sha256": "3da3fd131f38a093c93aea6b1f0e7c9166de96110e8930715296da12a3c856a3"
+    },
+    {
+      "path": "assets/qualitative/kitchen1-865-eligsir-depth.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 8204,
+      "sha256": "4e53bdbbe0ca0e37a5cb96141304082470903adc232ac84bff3df8aa3260734a"
+    },
+    {
+      "path": "assets/qualitative/kitchen1-865-eligsir-rgb.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 17942,
+      "sha256": "64422d46e7c5e969ce667311c26cf75aa8e16f96e3b89162695162b0bd362975"
+    },
+    {
+      "path": "assets/qualitative/kitchen1-865-reference-depth.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 13612,
+      "sha256": "2393c67bf4aa12292c92ae1c8e69b4fe9a66797fd7c7b9dcac0120e3d36ebafa"
+    },
+    {
+      "path": "assets/qualitative/kitchen1-865-reference-rgb.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 28936,
+      "sha256": "45d67e64a860ce039e4930d88c5265d601da9fd4f091af5bd41af66a96add82f"
+    },
+    {
+      "path": "assets/qualitative/scannet-000048-eligsir.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 60544,
+      "sha256": "8b0cdb763e034bad4d0f67a29d41338a05ba78b0c7ab1863879a007a76ee3ccd"
+    },
+    {
+      "path": "assets/qualitative/scannet-000048-reference.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 140498,
+      "sha256": "a57f4646ef24fd03c0cab6cc21ab6e8c24af07bd0962b5ab1e2d2ce0ee15b16d"
+    },
+    {
+      "path": "assets/qualitative/scannet-002624-eligsir.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 51256,
+      "sha256": "a2a8419497d04fc0414176de444bbb3fa8d747b4abb61c174484ffdfffb22744"
+    },
+    {
+      "path": "assets/qualitative/scannet-002624-reference.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 170078,
+      "sha256": "76cebf1cf9502f675655de2988e21f3b8da1d435f455ba96cbe6e3d37264480b"
+    },
+    {
+      "path": "assets/qualitative/scannet-005872-eligsir.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 47184,
+      "sha256": "ef14b50c2b6cfdb57f11442997c21b100858f56b72b00253d0f30b4efa782f35"
+    },
+    {
+      "path": "assets/qualitative/scannet-005872-reference.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 169674,
+      "sha256": "38d6fc3f87ef5eba9362df0aea2103e3586d2e5a65c1d824bd7758fcd11620e3"
+    },
+    {
+      "path": "assets/qualitative/scannetpp-000008-eligsir.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 35648,
+      "sha256": "5850822844abb8538611a0492c746f4dcdfc56e49f583a54497d514d8b4b9462"
+    },
+    {
+      "path": "assets/qualitative/scannetpp-000008-reference.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 63854,
+      "sha256": "6f93f8b02a7528bbab214f7ae510652297ff52ab6dfaef1ff9152d797d9c76be"
+    },
+    {
+      "path": "assets/qualitative/scannetpp-005624-eligsir.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 58528,
+      "sha256": "67ce31e04644fa5f9a035f29ca669a6c1c6e93552ddba943356cd50c1beeb431"
+    },
+    {
+      "path": "assets/qualitative/scannetpp-005624-reference.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 81586,
+      "sha256": "ecf10b9db1e249b3a44fe9bacc61bdbbef2d6f5e02f2f67ac74b50c40cecd024"
+    },
+    {
+      "path": "assets/qualitative/scannetpp-006752-eligsir.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 41164,
+      "sha256": "545815601f16b0e5a2f99b8910327a00d89ca76c841dfe58acd378f3ef246e52"
+    },
+    {
+      "path": "assets/qualitative/scannetpp-006752-reference.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 54124,
+      "sha256": "5fb63eb56d3e3f532746a4d9636c5b9469d2f79ff678a5932f695c1d93916798"
+    },
+    {
+      "path": "assets/real/fidelity-1x.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 38064,
+      "sha256": "bbbc18ab0e3630dcd509eff4e9592236c5ae56d809d0d569de4fd125c04d5e86"
+    },
+    {
+      "path": "assets/real/fidelity-eighth.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 22424,
+      "sha256": "dddb27fdd573e6246a3c18f5e3d6cece54f3b82c41e6a0ca54a3782450fd17f3"
+    },
+    {
+      "path": "assets/real/fidelity-half.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 35882,
+      "sha256": "58ecf14ebd642c05ead3db9ae8a0bf3c932212199d6df4026ba95d855170b63a"
+    },
+    {
+      "path": "assets/real/fidelity-quarter.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 20266,
+      "sha256": "48134e5613b30a2ae16d7deec80d505c443a55b688acb17b0e1251ea9c07133f"
+    },
+    {
+      "path": "assets/real/fr3-frame-a.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 39034,
+      "sha256": "28370afa4f5b8197e3eb7818049f2f180e4e6932ab97ae0cfced6ca183e97d03"
+    },
+    {
+      "path": "assets/real/fr3-frame-b.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 36650,
+      "sha256": "1703e153d124b4a984983bab806ea95bb70025ca701db3cecd2a0da6008ce03f"
+    },
+    {
+      "path": "assets/real/fr3-frame-c.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 32070,
+      "sha256": "e5ac3ed89bf2e862b77b427961af0b40f3a4b0981b9cf1b58a99069f97b25655"
+    },
+    {
+      "path": "assets/real/hero-fr3-eligsir-render.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 38982,
+      "sha256": "3a3287e53e82d9958c6d1bbc3e0b7175a277b3f1ce603323112d0d655c06836c"
+    },
+    {
+      "path": "assets/real/viewer-fr3.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 55064,
+      "sha256": "bede9b9711f675d4e60eadff07727636cf33f5c0c9c5e36dbd5df4a327a0e89f"
+    },
+    {
+      "path": "assets/real/viewer-kitchen1.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 22156,
+      "sha256": "52b48e71a8ef56d3418a686a85806f1976ed10ca50cbadca1cd26c66062b88b9"
+    },
+    {
+      "path": "assets/real/viewer-office0.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 22476,
+      "sha256": "4bb4114fa920952153d60fac2825fb05e4d565cc87bcfb22d0266156a82ef721"
+    },
+    {
+      "path": "assets/real/viewer-room2.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 32624,
+      "sha256": "c9515c0efd05fe59c979d3f6d2cfcaed6215ec4609dc8effd67df44be7b1750e"
+    },
+    {
+      "path": "assets/real/viewer-scannetpp.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 37324,
+      "sha256": "0655181d1080ea1947eac3f95555d4156119b2328243f77d2f1d0b00f1d24e77"
+    },
+    {
+      "path": "assets/video/eligsir-overview-720p.mp4",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 18966535,
+      "sha256": "f31539a70a8b30d050108b50c50ac07286955f7d3ad0f5621045382c526f9aaa"
+    },
+    {
+      "path": "assets/video/eligsir-overview-poster.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 33542,
+      "sha256": "317cbc2f72c434a0ac31dbd8eb87ba253a53663edad8148a3b82fc0f42829c26"
+    },
+    {
+      "path": "assets/video/eligsir-overview.chapters.vtt",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 305,
+      "sha256": "c0d1eedd7db24c61b6f5fe2d283e1ed346f9cf5c84d7d082d829c083792930c1"
+    },
+    {
+      "path": "assets/video/eligsir-overview.en.vtt",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 5184,
+      "sha256": "f1c22b8311431176479d5d5a1d60cf58aef3d8a30e89c55c1a9b5f3a87f25ddc"
+    },
+    {
+      "path": "assets/video/eligsir-overview.mp4",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 35461145,
+      "sha256": "dedc74a0204e6c45e77d52d4268ad08c1323b2c34862c32a563b30c8e6f975fb"
+    },
+    {
+      "path": "assets/viewer/LICENSE",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 1077,
+      "sha256": "44716a2a1040df078772702d677d46f7d97f40c2375bf8221d4b3b741143f823"
+    },
+    {
+      "path": "assets/viewer/scenes/fr3.sog",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 6166210,
+      "sha256": "ca63d10c4ded697b30f47b0cc800d8a3ebe12b3ac4fffc15ea83bdaf05bddc77"
+    },
+    {
+      "path": "assets/viewer/scenes/kitchen1.sog",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 4531674,
+      "sha256": "097c54d2e8b4ebcbb3f030faeb8d36d7e71a615c6b4592e22f12c91875fc95c1"
+    },
+    {
+      "path": "assets/viewer/scenes/office0.sog",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 4123206,
+      "sha256": "65f0f610c3468594f7e1f7ff1a90f20b88c3099f95ed2dce75c70ac21d92722e"
+    },
+    {
+      "path": "assets/viewer/scenes/room2.sog",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 6223072,
+      "sha256": "022409a714235367f5fc6f786809eb00ccafedd0f1d8c7baeee36fdcf811bb2b"
+    },
+    {
+      "path": "assets/viewer/scenes/scannetpp.sog",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 15685962,
+      "sha256": "227eea0f81f267296adb3f5b166d2f97d1abd552027dbe7a2352138a79d373a3"
+    },
+    {
+      "path": "assets/viewer/scenes/scenes.json",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 6372,
+      "sha256": "0f2600c1953f729bce0cb7c4df74825f2c392565de7d0d13466ee42ef82b93f0"
+    },
+    {
+      "path": "assets/viewer/viewer.html",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 3126102,
+      "sha256": "ad5e320273e859c7d83a8845948683ccf11e1169dbdea92168a0b140ee40f483"
+    }
+  ]
+}

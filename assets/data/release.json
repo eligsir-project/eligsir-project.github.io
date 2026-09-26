@@ -1,0 +1,17 @@
+{
+  "release": "icra27-rc2",
+  "core": "fa859ba3c37240d3dfdf79d4d65e8c9d47f00f4b",
+  "ros2": "e4c3249752c9241887595eac05a0ca06d89be584",
+  "rgbd_sync": "9a5930762806bd56af99c7176352e70c21733b91",
+  "gsplat_rocm": "c6b363ab9239c958a4ac6619f725119dc8e5706b",
+  "image_digests": {
+    "core": {
+      "cuda": "sha256:85283937f9571cd91dd78af80287baab25eaf1ee6d57da8b03c73e96f3294a58",
+      "rocm": "sha256:bdf2da71a0fde621a3cb044be0728a9169b5f09126860fbe48f2f21fa14234f3"
+    },
+    "ros2": {
+      "cuda": "sha256:a78fca70428ac395743faf5e823f53c32ab4829245b2216430abd4163dc17881",
+      "rocm": "sha256:0953233f571afb31153322dd706d5d1883b24cf8b16ee5327619fe13bdca83c8"
+    }
+  }
+}

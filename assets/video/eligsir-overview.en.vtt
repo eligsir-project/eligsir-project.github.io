@@ -1,0 +1,243 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.457
+This video presents EliGSiR: continual Gaussian
+splatting under bounded compute.
+
+2
+00:00:05.467 --> 00:00:11.358
+Our goal is to maintain a high-quality Gaussian
+map while observations are arriving,
+
+3
+00:00:11.368 --> 00:00:15.655
+rather than reconstructing the scene only
+after acquisition has finished.
+
+4
+00:00:17.656 --> 00:00:22.804
+Classical SLAM systems are designed primarily for
+fast and accurate camera tracking.
+
+5
+00:00:22.814 --> 00:00:27.129
+Their map representations, however, are usually
+optimized for geometry rather than
+
+6
+00:00:27.139 --> 00:00:33.555
+visual reconstruction. Gaussian splatting
+provides a much richer representation and
+
+7
+00:00:33.565 --> 00:00:37.722
+can produce photorealistic scene renderings,
+but typically requires substantial
+
+8
+00:00:37.732 --> 00:00:45.270
+offline optimization. We therefore ask: can we
+retain the visual quality of Gaussian
+
+9
+00:00:45.280 --> 00:00:49.490
+representations while keeping the map
+continuously up to date with a live sensor
+
+10
+00:00:49.500 --> 00:00:49.869
+stream?
+
+11
+00:00:51.942 --> 00:00:59.762
+This introduces several challenges. First,
+online does not necessarily mean
+
+12
+00:00:59.772 --> 00:01:04.196
+real-time. If processing takes longer than
+the incoming sequence, the mapper
+
+13
+00:01:04.206 --> 00:01:10.662
+accumulates an increasing backlog. Second,
+computation is often allocated uniformly,
+
+14
+00:01:10.672 --> 00:01:15.213
+even though easy, repeated, and difficult
+observations do not require the same
+
+15
+00:01:15.223 --> 00:01:21.300
+amount of optimization. Third, the number of
+Gaussians can grow rapidly as new parts
+
+16
+00:01:21.310 --> 00:01:27.852
+of the scene are observed, increasing
+rendering and optimization cost.
+
+17
+00:01:27.862 --> 00:01:32.753
+Finally, final reconstruction quality alone does
+not tell us when different parts of
+
+18
+00:01:32.763 --> 00:01:35.155
+the map became usable during acquisition.
+
+19
+00:01:39.466 --> 00:01:42.983
+EliGSiR addresses these problems through
+three adaptive mapping decisions.
+
+20
+00:01:42.993 --> 00:01:47.990
+First: which observations
+should we optimize?
+
+21
+00:01:48.000 --> 00:01:53.257
+Map-guided view scheduling selects from both
+recent and historical observations.
+
+22
+00:01:53.267 --> 00:01:58.092
+Replaying older views allows previously
+observed areas to keep improving, while
+
+23
+00:01:58.102 --> 00:02:01.619
+spatial training residuals direct attention
+toward regions that still need
+
+24
+00:02:01.629 --> 00:02:04.288
+refinement. Second: at what
+fidelity should we optimize?
+
+25
+00:02:04.298 --> 00:02:12.238
+Load-adaptive supervision adjusts training
+resolution according to measured
+
+26
+00:02:12.248 --> 00:02:16.194
+computational cost, avoiding full-resolution
+optimization when the available budget
+
+27
+00:02:16.204 --> 00:02:19.965
+does not require it. Third: where
+should geometry grow?
+
+28
+00:02:19.975 --> 00:02:28.700
+Existing supported surfaces are refined
+directly, while uncertain new geometry is
+
+29
+00:02:28.710 --> 00:02:32.322
+delayed. New Gaussians are introduced once
+the structure receives sufficient
+
+30
+00:02:32.332 --> 00:02:37.050
+multi-view support. Together, these mechanisms
+allocate computation according to the
+
+31
+00:02:37.060 --> 00:02:38.252
+current state of the map.
+
+32
+00:02:41.719 --> 00:02:48.026
+We first evaluate reconstruction along the
+observed TUM fr3 camera trajectory.
+
+33
+00:02:48.036 --> 00:02:55.156
+Here, EliGSiR and the baselines are rendered
+from the same registered camera poses
+
+34
+00:02:55.166 --> 00:02:59.803
+and compared directly with the
+corresponding ground-truth RGB images.
+
+35
+00:02:59.813 --> 00:03:08.713
+Because these viewpoints were available during
+mapping, this comparison shows how
+
+36
+00:03:08.723 --> 00:03:13.100
+accurately each method reconstructs the
+observations it received.
+
+37
+00:03:34.281 --> 00:03:38.413
+We then render the same reconstructed maps from
+a new camera trajectory that was
+
+38
+00:03:38.423 --> 00:03:45.187
+never observed during mapping. This provides a
+stricter test of the underlying
+
+39
+00:03:45.197 --> 00:03:50.211
+three-dimensional representation. Good
+performance can no longer come only from
+
+40
+00:03:50.221 --> 00:03:54.457
+reproducing the input views; the reconstructed
+geometry and appearance must remain
+
+41
+00:03:54.467 --> 00:03:56.797
+consistent from previously
+unseen viewpoints.
+
+42
+00:04:20.989 --> 00:04:23.477
+Finally, we show EliGSiR
+operating in real time.
+
+43
+00:04:23.487 --> 00:04:30.813
+On the left, the Gaussian map grows
+continuously together with the camera
+
+44
+00:04:30.823 --> 00:04:35.625
+trajectory. The reconstruction remains up to
+date with the incoming trajectory
+
+45
+00:04:35.635 --> 00:04:43.909
+during live processing. On the right, the
+current camera input is shown together
+
+46
+00:04:43.919 --> 00:04:52.403
+with the rendering produced from the
+current map at the same viewpoint.
+
+47
+00:04:52.413 --> 00:04:54.796
+This demonstrates the central
+goal of EliGSiR:
+
+48
+00:04:54.806 --> 00:04:59.167
+continually improving a Gaussian representation
+while keeping pace with the incoming
+
+49
+00:04:59.177 --> 00:05:01.050
+sensor stream under bounded compute.
+

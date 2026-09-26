@@ -1,0 +1,173 @@
+{
+  "schema_version": 2,
+  "note": "Panels from the paper's Figs. 7 and 8, matched viewpoints; depth uses one shared metric range.",
+  "colorbar": {
+    "image": "assets/qualitative/depth-colorbar-0.3-5m.webp",
+    "caption": "Metric depth (m), shared range 0.3–5.0"
+  },
+  "default": {
+    "group": "fr3-1152",
+    "view": "fr3-1152",
+    "mode": "rgb"
+  },
+  "groups": [
+    {
+      "id": "fr3-1152",
+      "label": "TUM fr3 · view 1152",
+      "baseline_label": "CaRtGS",
+      "modes": [
+        "rgb",
+        "depth"
+      ]
+    },
+    {
+      "id": "kitchen1-865",
+      "label": "kitchen1 · source 865",
+      "baseline_label": "CaRtGS",
+      "modes": [
+        "rgb",
+        "depth"
+      ]
+    },
+    {
+      "id": "scannet",
+      "label": "ScanNet · views 48 / 2624 / 5872",
+      "baseline_label": "Reference",
+      "modes": [
+        "rgb"
+      ]
+    },
+    {
+      "id": "scannetpp",
+      "label": "ScanNet++ · views 8 / 5624 / 6752",
+      "baseline_label": "Reference",
+      "modes": [
+        "rgb"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "fr3-1152",
+      "group": "fr3-1152",
+      "label": "View 1152",
+      "images": {
+        "reference_rgb": "assets/qualitative/fr3-1152-reference-rgb.webp",
+        "baseline_rgb": "assets/qualitative/fr3-1152-cartgs-rgb.webp",
+        "eligsir_rgb": "assets/qualitative/fr3-1152-eligsir-rgb.webp",
+        "reference_depth": "assets/qualitative/fr3-1152-reference-depth.webp",
+        "baseline_depth": "assets/qualitative/fr3-1152-cartgs-depth.webp",
+        "eligsir_depth": "assets/qualitative/fr3-1152-eligsir-depth.webp"
+      },
+      "metrics": {
+        "rgb": {
+          "baseline": "CaRtGS · PSNR 26.23 dB",
+          "eligsir": "EliGSiR · PSNR 26.71 dB"
+        },
+        "depth": {
+          "baseline": "MAE ≤ 2 m: 22.19 cm",
+          "eligsir": "12.74 cm"
+        }
+      },
+      "width": 541,
+      "height": 405
+    },
+    {
+      "id": "kitchen1-865",
+      "group": "kitchen1-865",
+      "label": "Source 865",
+      "images": {
+        "reference_rgb": "assets/qualitative/kitchen1-865-reference-rgb.webp",
+        "baseline_rgb": "assets/qualitative/kitchen1-865-cartgs-rgb.webp",
+        "eligsir_rgb": "assets/qualitative/kitchen1-865-eligsir-rgb.webp",
+        "reference_depth": "assets/qualitative/kitchen1-865-reference-depth.webp",
+        "baseline_depth": "assets/qualitative/kitchen1-865-cartgs-depth.webp",
+        "eligsir_depth": "assets/qualitative/kitchen1-865-eligsir-depth.webp"
+      },
+      "metrics": {
+        "rgb": {
+          "baseline": "CaRtGS · PSNR 20.10 dB",
+          "eligsir": "EliGSiR · PSNR 22.49 dB"
+        },
+        "depth": {
+          "baseline": "MAE ≤ 2 m: 9.20 cm",
+          "eligsir": "7.18 cm"
+        }
+      },
+      "width": 541,
+      "height": 405
+    },
+    {
+      "id": "scannet-000048",
+      "group": "scannet",
+      "label": "View 48",
+      "images": {
+        "reference_rgb": "assets/qualitative/scannet-000048-reference.webp",
+        "baseline_rgb": "assets/qualitative/scannet-000048-reference.webp",
+        "eligsir_rgb": "assets/qualitative/scannet-000048-eligsir.webp"
+      },
+      "width": 1280,
+      "height": 955
+    },
+    {
+      "id": "scannet-002624",
+      "group": "scannet",
+      "label": "View 2624",
+      "images": {
+        "reference_rgb": "assets/qualitative/scannet-002624-reference.webp",
+        "baseline_rgb": "assets/qualitative/scannet-002624-reference.webp",
+        "eligsir_rgb": "assets/qualitative/scannet-002624-eligsir.webp"
+      },
+      "width": 1280,
+      "height": 955
+    },
+    {
+      "id": "scannet-005872",
+      "group": "scannet",
+      "label": "View 5872",
+      "images": {
+        "reference_rgb": "assets/qualitative/scannet-005872-reference.webp",
+        "baseline_rgb": "assets/qualitative/scannet-005872-reference.webp",
+        "eligsir_rgb": "assets/qualitative/scannet-005872-eligsir.webp"
+      },
+      "width": 1280,
+      "height": 955
+    },
+    {
+      "id": "scannetpp-000008",
+      "group": "scannetpp",
+      "label": "View 8",
+      "images": {
+        "reference_rgb": "assets/qualitative/scannetpp-000008-reference.webp",
+        "baseline_rgb": "assets/qualitative/scannetpp-000008-reference.webp",
+        "eligsir_rgb": "assets/qualitative/scannetpp-000008-eligsir.webp"
+      },
+      "width": 1280,
+      "height": 959
+    },
+    {
+      "id": "scannetpp-005624",
+      "group": "scannetpp",
+      "label": "View 5624",
+      "images": {
+        "reference_rgb": "assets/qualitative/scannetpp-005624-reference.webp",
+        "baseline_rgb": "assets/qualitative/scannetpp-005624-reference.webp",
+        "eligsir_rgb": "assets/qualitative/scannetpp-005624-eligsir.webp"
+      },
+      "width": 1280,
+      "height": 959
+    },
+    {
+      "id": "scannetpp-006752",
+      "group": "scannetpp",
+      "label": "View 6752",
+      "images": {
+        "reference_rgb": "assets/qualitative/scannetpp-006752-reference.webp",
+        "baseline_rgb": "assets/qualitative/scannetpp-006752-reference.webp",
+        "eligsir_rgb": "assets/qualitative/scannetpp-006752-eligsir.webp"
+      },
+      "width": 1280,
+      "height": 959
+    }
+  ]
+}

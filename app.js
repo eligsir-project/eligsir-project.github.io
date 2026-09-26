@@ -2,6 +2,19 @@
 (() => {
   'use strict';
   document.documentElement.classList.remove('no-js');
+  // Abstract: clamp to a few lines with a "Read more" toggle.
+  const abstractText = document.getElementById('abstract-text');
+  const abstractMore = document.getElementById('abstract-more');
+  if (abstractText && abstractMore) {
+    abstractText.classList.add('clamped');
+    abstractMore.hidden = false;
+    abstractMore.addEventListener('click', () => {
+      const expanded = abstractMore.getAttribute('aria-expanded') === 'true';
+      abstractText.classList.toggle('clamped', expanded);
+      abstractMore.setAttribute('aria-expanded', String(!expanded));
+      abstractMore.innerHTML = expanded ? 'Read more <span aria-hidden="true">↓</span>' : 'Show less <span aria-hidden="true">↑</span>';
+    });
+  }
   const $ = (selector, scope = document) => scope.querySelector(selector);
   const $$ = (selector, scope = document) => Array.from(scope.querySelectorAll(selector));
   const data = window.ELIGSIR_CONTENT;
@@ -261,7 +274,7 @@
   const plotX0 = 76, plotX1 = 690, plotY0 = 268, plotY1 = 42;
   const scaleX = rtf => plotX0 + (Math.log10(rtf) - Math.log10(xMin)) / (Math.log10(xMax) - Math.log10(xMin)) * (plotX1 - plotX0);
   const scaleY = db => plotY0 - (db - yMin) / (yMax - yMin) * (plotY0 - plotY1);
-  const rtfChart = svgElement('svg', {viewBox:'0 0 730 320',role:'group','aria-label':'Held-out PSNR versus real-time factor for TUM RGB-D fr3. Select a method point for exact values.'});
+  const rtfChart = svgElement('svg', {viewBox:'0 14 730 306',role:'group','aria-label':'Held-out PSNR versus real-time factor for TUM RGB-D fr3. Select a method point for exact values.'});
   rtfChart.appendChild(svgElement('title',{},'Online mapping endpoints for TUM RGB-D fr3, GT and tracked poses'));
   [14,16,18,20,22,24].forEach(db => {
     const y = scaleY(db);
@@ -293,7 +306,7 @@
   };
   // Custom per-point label placement so labels stay inside the plot and don't overlap.
   const labelPlacement = {
-    'eligsir-tracked': {dx: -16, dy1: -6, dy2: 12, anchor: 'end'},
+    'eligsir-tracked': {dx: 16, dy1: -12, dy2: 3, anchor: 'start'},
     'cartgs-tracked': {dx: 16, dy1: 22, dy2: 36, anchor: 'start'},
     'splatam-gt': {dx: -16, dy1: -6, dy2: 12, anchor: 'end'},
     'varsplat-gt': {dx: -16, dy1: -6, dy2: 12, anchor: 'end'},
@@ -471,7 +484,7 @@
     if (!group.modes.includes(selectedMode)) selectedMode = 'rgb';
     if (view.width && view.height) {
       comparisonEl.style.aspectRatio = view.width + ' / ' + view.height;
-      comparisonEl.style.maxWidth = (view.width * 2) + 'px';
+      comparisonEl.style.maxWidth = Math.round(view.width * 1.5) + 'px';
     }
     $$('.mode-tabs button').forEach(button => {
       const mode = button.dataset.mode;

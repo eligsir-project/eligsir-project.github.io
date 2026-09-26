@@ -49,3 +49,151 @@
 .mode-tabs button[aria-disabled="true"]{color:var(--muted-dark);opacity:.75}
 @media(max-width:720px){.diagram-label{font-size:9px}}
 .no-js .result-readout,.no-js .refine-intro,.no-js #refinement-stages,.no-js #refine-bars{display:none}
+
+/* Pass 7: compaction/readability pass — hero, rhythm, abstract layout, tables, sections. */
+.hero{padding-top:24px;min-height:0}
+.hero-footnote{font-size:12px;margin-top:14px}
+@media(min-width:1101px){.hero{padding-top:20px;min-height:0}.hero-visual>img{height:392px}.hero-bottom{margin-top:0}}
+@media(min-width:1500px){.hero{padding-top:26px}.hero-visual>img{height:410px}}
+@media(max-width:1100px){.hero{padding-top:26px;min-height:0}}
+@media(max-width:800px){.hero{padding-top:22px}}
+@media(max-width:540px){.hero{padding-top:16px}.hero-footnote{font-size:11px;margin-top:12px}}
+.abstract-section{padding-top:26px;padding-bottom:22px}
+.abstract-columns{display:grid;grid-template-columns:62fr 38fr;gap:28px;align-items:start}
+.abstract-columns .stat-tiles{display:flex;flex-direction:column;border-top:0;padding-top:0;gap:14px}
+@media(max-width:800px){.abstract-columns{grid-template-columns:1fr;gap:22px}.abstract-columns .stat-tiles{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);padding-top:20px;gap:16px}}
+@media(max-width:540px){.abstract-columns .stat-tiles{grid-template-columns:1fr}}
+.section-space{padding-block:63px}
+@media(max-width:1100px){.section-space{padding-block:49px}}
+@media(max-width:540px){.section-space{padding-block:38px}}
+.explore-section{padding-top:37px;padding-bottom:25px}
+@media(min-width:1101px){.explore-section{padding-top:29px}}
+@media(max-width:540px){.explore-section{padding-top:26px;padding-bottom:19px}}
+h2{font-size:clamp(27px,2.84vw,42px)}
+@media(max-width:540px){h2{font-size:28px}}
+.section-heading{margin-bottom:26px}
+.viewer-credit{font-size:11px;color:#9fb6c2;margin-left:auto;white-space:nowrap}
+@media(min-width:801px){.viewer-stage{height:min(62vh,600px)}}
+.video-chapter{padding:8px 7px}
+.compare-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+.compare-toolbar .scene-strip{margin-top:0;padding-bottom:0}
+.compare-controls{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+@media(max-width:800px){.compare-toolbar{flex-direction:column;align-items:flex-start}}
+.chart-title{margin-bottom:12px}
+@media(min-width:1101px){.metric-line strong{font-size:44px}.metric-line.time strong{font-size:32px}}
+.metric-line.time{margin-top:14px}
+th,td{padding:8px 15px}
+.table-group-row th{padding-top:10px}
+#scenes-table-wrap td:nth-of-type(n+2){text-align:right;white-space:nowrap}
+#scenes-table-wrap thead th:nth-child(n+3){text-align:right}
+#ablations-table-wrap td{text-align:right;white-space:nowrap}
+#ablations-table-wrap thead th:nth-child(n+2){text-align:right}
+#panel-refinement table td{text-align:right;white-space:nowrap}
+#panel-refinement thead th:not(:first-child){text-align:right}
+@media(min-width:801px){
+  .result-readout h3{margin:8px 0 14px;font-size:20px}
+  .result-readout>p{margin-top:16px}
+  .result-readout>.text-link{margin-top:12px}
+  .resource-card h3{font-size:19px}
+  .resource-card{padding:22px 20px 22px 0}
+  .resource-card+.resource-card{padding-left:20px}
+}
+.paper-card{display:grid;grid-template-columns:minmax(0,280px) 1fr;gap:28px;align-items:start}
+.paper-card-top{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+@media(min-width:901px){.bibtex-block{margin-top:0}}
+@media(max-width:900px){.paper-card{grid-template-columns:1fr}}
+.scene-chip{min-height:40px}
+@media(min-width:541px){.during-grid{grid-template-columns:repeat(2,1fr)}}
+.caution-note{max-width:none}
+.section-heading>p{max-width:520px}
+.method-copy p{font-size:15px}
+.refine-intro{font-size:15px}
+.scope-details p{font-size:15px;max-width:75ch}
+.implementation-note{font-size:12px;max-width:none}
+#during>p{max-width:75ch}
+@media(max-width:800px){.replay-map{height:auto}}
+/* Pass 7b: font-size floor (>=11px; captions >=12px) for real informational text, excluding pills/tags/footer. */
+.mini-label{font-size:11px}
+.video-chapter>span{font-size:11px}
+.viewer-kind{font-size:11px}
+.viewer-size{font-size:11px}
+.diagram-label{font-size:11px}
+.connector-label{font-size:11px}
+.chart-ref-label{font:11px Arial}
+.online-chart .point-value{font:11px Arial}
+.reference-heading .small{font-size:11px}
+.reference-heading .mini-label,.select-label{font-size:11px}
+.replay-map figcaption{font-size:12px}
+.filmstrip figcaption{font-size:12px}
+.decision-label small{font-size:11px}
+.result-readout>.mini-label{font-size:11px}
+.comparison-footer{font-size:11px}
+.chart-title>span{font-size:11px}
+.compare-context .mini-label{font-size:11px}
+.comparison-disclosure p{font-size:11px}
+.viewer-scene{font-size:12px}
+.metric-line>span{font-size:11px}
+.resource-card .mini-label{font-size:11px}
+@media(max-width:540px){
+  .hero .eyebrow{font-size:11px}
+  .eyebrow{font-size:11px}
+  .viewer-tool{font-size:11px}
+  .viewer-toolbar>p{font-size:11px}
+  .image-label{font-size:11px}
+  .comparison-footer .text-link{font-size:11px}
+  .comparison-disclosure .text-link{font-size:11px}
+  .scene-chip{font-size:11px}
+  .mode-tabs button{font-size:11px}
+}
+@media(max-width:800px){.result-readout p,.result-readout .text-link{font-size:11px}}
+@media(max-width:540px){.caption{font-size:12px}.result-readout>p,.result-readout>.text-link{font-size:11px}}
+/* Hero render: fade into the page on every side (right edge included). */
+.hero-visual>img{
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 24%,#000 66%,transparent 97%),linear-gradient(to bottom,transparent 0,#000 18%,#000 74%,transparent 100%);
+  mask-image:linear-gradient(to right,transparent 0,#000 24%,#000 66%,transparent 97%),linear-gradient(to bottom,transparent 0,#000 18%,#000 74%,transparent 100%);
+  -webkit-mask-composite:source-in;mask-composite:intersect;opacity:1}
+/* Layout pass 2: tiles above abstract, two-column abstract, balanced figure cards, readable notes. */
+.abstract-section>.stat-tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;border-top:1px solid var(--line);padding-top:18px;margin-top:18px}
+.abstract-section>.abstract-body{margin-top:22px}
+.abstract-section>.abstract-body p{max-width:none}
+@media(max-width:900px){.abstract-section>.stat-tiles{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.abstract-section>.stat-tiles{grid-template-columns:1fr;gap:12px}}
+@media(min-width:801px){.during-grid{grid-template-columns:1.45fr 1fr;align-items:start}}
+#during .caption{max-width:75ch}
+/* Layout pass 3: mobile readability. */
+@media(max-width:720px){
+  .abstract-section>.stat-tiles{grid-template-columns:repeat(2,1fr);gap:14px 16px}
+  .abstract-section .stat-tile strong{font-size:16px}
+  .abstract-section .stat-tile span{font-size:12px}
+  .scene-strip{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:4px}
+  .scene-strip::-webkit-scrollbar{display:none}
+  .scene-strip .scene-chip{flex:0 0 auto;white-space:nowrap}
+  .chart-area{overflow-x:auto}
+  #rtf-chart{min-width:560px}
+  #ablations-table-wrap th[scope=row]{white-space:nowrap}
+  #ablations-table-wrap table,#scenes-table-wrap table{font-size:13px}
+}
+/* Abstract "Read more": clamp to 4 lines (5 on phones) with a soft fade. */
+.abstract-section>.abstract-body p{max-width:88ch}
+.abstract-text.clamped{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;line-clamp:4;overflow:hidden;-webkit-mask-image:linear-gradient(to bottom,#000 60%,transparent);mask-image:linear-gradient(to bottom,#000 60%,transparent)}
+.abstract-more{margin-top:8px}
+@media(max-width:720px){.abstract-text.clamped{-webkit-line-clamp:5;line-clamp:5}}
+.abstract-more{color:var(--brand-dark);font-weight:500}
+@media(max-width:720px){
+  .scene-strip,.compare-toolbar .scene-strip{width:100%;max-width:100%;min-width:0}
+  .compare-toolbar{align-items:stretch}
+  .result-panel,.result-panel>*,.chart-area{min-width:0;max-width:100%}
+}
+/* Layout pass 4 */
+.chart-legend>span{display:inline-flex;align-items:center;margin-right:14px}
+.chart-legend{margin-bottom:0}
+@media(min-width:801px){.method-panel .method-copy{align-self:center}}
+#during>p.caption{max-width:118ch}
+/* Layout pass 5: mobile chapters as a compact grid; tighter code cards. */
+@media(max-width:720px){
+  #video-chapters{display:grid;grid-template-columns:1fr 1fr;column-gap:12px}
+  #video-chapters .video-chapter{padding:7px 4px}
+  .resource-card{padding:14px 0}
+  .resource-card h3{font-size:18px;margin:4px 0}
+  .resource-card .resource-tag{margin-top:6px}
+}

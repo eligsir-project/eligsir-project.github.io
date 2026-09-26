@@ -2,6 +2,20 @@
   "schema_version": 1,
   "assets": [
     {
+      "path": "assets/brand/apple-touch-icon.png",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 5494,
+      "sha256": "1187c3fe185eb3da015ff285d265419b86328fdc8c35091920703bc4698c811e"
+    },
+    {
+      "path": "assets/brand/favicon-32.png",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 1319,
+      "sha256": "465dbef3a1237f7253a244a9bcbdc32752fe030d1fb7eb82735607f6971e33bb"
+    },
+    {
       "path": "assets/brand/logo-dark.svg",
       "role": "Brand",
       "notes": "Supplied outlined Alexandrite lockup; no font file required.",
@@ -19,8 +33,8 @@
       "path": "assets/brand/mark.svg",
       "role": "Website media",
       "notes": "Local supplied or derived website asset; no external loading.",
-      "bytes": 368,
-      "sha256": "5b1dd9b8142110324a835e20aad9406ab624424d55afb217fea8804ee6ec32cb"
+      "bytes": 798,
+      "sha256": "b96ca1ac4bfb50e1a00821ac8a49478f681ed5edc48bb5d839a0b4c245151052"
     },
     {
       "path": "assets/data/release.json",

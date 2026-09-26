@@ -9,6 +9,8 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; connect-src 'self'; frame-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <title>EliGSiR — A map. While you move.</title>
   <link rel="icon" href="assets/brand/mark.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
   <link rel="preload" as="image" href="assets/real/hero-fr3-eligsir-render.webp">
   <link rel="stylesheet" href="styles.css">
   <script src="data/content.js" defer></script>
@@ -36,13 +38,11 @@
         <a class="button primary" href="#video">Watch the overview <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
         <a class="button secondary" href="#explore">Explore in 3D</a>
         <a class="text-link" href="assets/paper/eligsir-anonymous.pdf">Paper (PDF) <span aria-hidden="true">↓</span></a>
-        <p class="hero-footnote">Anonymous ICRA 2027 submission<br> Evidence-guided Load-adaptive Incremental Gaussian Splatting with Image Replay</p>
+        <p class="hero-footnote">Anonymous ICRA 2027 submission</p>
       </div>
       <figure class="hero-visual">
         <img src="assets/real/hero-fr3-eligsir-render.webp" width="960" height="650" alt="EliGSiR rendering of an office scene from the TUM RGB-D fr3 sequence" fetchpriority="high">
-        <figcaption><span class="caption-rule"></span><span>EliGSiR rendering · TUM RGB-D fr3/long_office_household<br> <span class="muted">From the overview video</span></span></figcaption>
       </figure>
-      <div class="hero-bottom"><span>RGB-D + camera poses</span><span class="flow-arrow" aria-hidden="true">⟶</span><span>Adaptive allocation</span><span class="flow-arrow" aria-hidden="true">⟶</span><span>An evolving 3D Gaussian map</span><a href="#method" class="text-link">Discover the method <span aria-hidden="true">↓</span></a></div>
     </section>
 
     <section class="abstract-section wrap" id="abstract" aria-labelledby="abstract-title">
@@ -52,20 +52,21 @@
         <span class="tap-hint">Tap to enlarge</span>
         <figcaption>From a continual RGB-D stream to an evolving 3D Gaussian map. EliGSiR allocates bounded compute across view scheduling, supervision fidelity, and geometry growth, yielding higher-quality held-out renderings than RTG-SLAM and CaRtGS in the shown views (TUM RGB-D fr3).</figcaption>
       </figure>
-      <div class="abstract-body">
-        <span class="mini-label">ABSTRACT</span>
-        <p>Conventional 3D Gaussian Splatting assumes a closed set of observations and long optimization schedules. Continual RGB-D mapping in contrast poses the problem that new observations arrive online, while previously reconstructed regions must be preserved. We present EliGSiR (Evidence-guided Load-adaptive Incremental Gaussian Splatting with Image Replay), a continual Gaussian mapper that controls how the available optimization budget is used as the reconstruction evolves. Map-Guided View Scheduling filters redundant incoming views and reconsiders retained views according to the current state of the map. Load-Adaptive Fidelity adjusts supervision resolution to the current mapping load instead of following a fixed resolution schedule. Targeted Geometry Growth separates depth supervision from Gaussian creation and adds geometric capacity only where repeated RGB-D observations indicate missing or misplaced structure. Together, these mechanisms adapt which views are optimized, how much image detail is used, and where the representation grows while mapping remains active. We evaluate EliGSiR on Replica, TUM RGB-D, ScanNet++, and real RGB-D sensor sequences, considering both the final reconstruction and the map available throughout acquisition. On TUM RGB-D fr3/long_office_household, EliGSiR reaches 21.52 dB with the same ground-truth mapping poses used by the controlled baselines, compared with 19.42 dB for SplaTAM. In the tracked-pose comparison, EliGSiR with live ORB-SLAM3 poses reaches 23.02 dB in 155.5 s, compared with 20.10 dB in 230.9 s for CaRtGS using its native tracker. We further evaluate reconstruction throughout acquisition and show how EliGSiR's adaptive view scheduling, supervision fidelity, and geometry growth improve the use of the available mapping budget.</p>
-      </div>
       <div class="stat-tiles">
-        <div class="stat-tile"><strong>23.02 dB in 155.5 s</strong><span>tracked poses, 1.78× real time (CaRtGS: 20.10 dB, 2.65×)</span></div>
-        <div class="stat-tile"><strong>21.52 dB with GT poses</strong><span>SplaTAM 19.42 dB at 15.87× real time</span></div>
-        <div class="stat-tile"><strong>7.0× less image-space supervision</strong><span>TUM fr3: 2786.9 M → 398.2 M px, with higher CVQ-AUC</span></div>
-        <div class="stat-tile"><strong>Evaluated on 4 dataset families</strong><span>TUM RGB-D, Replica, ScanNet++/ScanNet and real Orbbec sensors</span></div>
-      </div>
+          <div class="stat-tile"><strong>23.02 dB in 155.5 s</strong><span>tracked poses, 1.78× real time (CaRtGS: 20.10 dB, 2.65×)</span></div>
+          <div class="stat-tile"><strong>21.52 dB with GT poses</strong><span>SplaTAM 19.42 dB at 15.87× real time</span></div>
+          <div class="stat-tile"><strong>7.0× less image-space supervision</strong><span>TUM fr3: 2786.9 M → 398.2 M px, with higher CVQ-AUC</span></div>
+          <div class="stat-tile"><strong>Evaluated on 4 dataset families</strong><span>TUM RGB-D, Replica, ScanNet++/ScanNet and real Orbbec sensors</span></div>
+        </div>
+      <div class="abstract-body">
+          <span class="mini-label">ABSTRACT</span>
+          <p id="abstract-text" class="abstract-text">Conventional 3D Gaussian Splatting assumes a closed set of observations and long optimization schedules. Continual RGB-D mapping in contrast poses the problem that new observations arrive online, while previously reconstructed regions must be preserved. We present EliGSiR (Evidence-guided Load-adaptive Incremental Gaussian Splatting with Image Replay), a continual Gaussian mapper that controls how the available optimization budget is used as the reconstruction evolves. Map-Guided View Scheduling filters redundant incoming views and reconsiders retained views according to the current state of the map. Load-Adaptive Fidelity adjusts supervision resolution to the current mapping load instead of following a fixed resolution schedule. Targeted Geometry Growth separates depth supervision from Gaussian creation and adds geometric capacity only where repeated RGB-D observations indicate missing or misplaced structure. Together, these mechanisms adapt which views are optimized, how much image detail is used, and where the representation grows while mapping remains active. We evaluate EliGSiR on Replica, TUM RGB-D, ScanNet++, and real RGB-D sensor sequences, considering both the final reconstruction and the map available throughout acquisition. On TUM RGB-D fr3/long_office_household, EliGSiR reaches 21.52 dB with the same ground-truth mapping poses used by the controlled baselines, compared with 19.42 dB for SplaTAM. In the tracked-pose comparison, EliGSiR with live ORB-SLAM3 poses reaches 23.02 dB in 155.5 s, compared with 20.10 dB in 230.9 s for CaRtGS using its native tracker. We further evaluate reconstruction throughout acquisition and show how EliGSiR's adaptive view scheduling, supervision fidelity, and geometry growth improve the use of the available mapping budget.</p>
+        <button class="text-link abstract-more" id="abstract-more" aria-expanded="false" aria-controls="abstract-text" hidden>Read more <span aria-hidden="true">↓</span></button>
+        </div>
     </section>
 
     <section class="video-section wrap section-space" id="video" aria-labelledby="video-title">
-      <div class="section-heading"><div><p class="eyebrow section-number">01 / OVERVIEW VIDEO</p><h2 id="video-title">Six minutes.<br> The whole idea.</h2></div><p>A narrated overview: motivation, method, and side-by-side comparisons with baselines on TUM fr3.</p></div>
+      <div class="section-heading"><div><p class="eyebrow section-number">01 / OVERVIEW VIDEO</p><h2 id="video-title">Six minutes. The whole idea.</h2></div><p>A narrated overview: motivation, method and baseline comparisons on TUM fr3.</p></div>
       <div class="video-grid">
         <div class="video-wrap">
           <video id="overview-video" controls playsinline preload="none" poster="assets/video/eligsir-overview-poster.webp" aria-label="EliGSiR overview video">
@@ -88,25 +89,25 @@
             <button class="video-chapter" data-time="17" aria-pressed="false"><span>0:17</span><strong>Motivation</strong></button>
             <button class="video-chapter" data-time="52.7" aria-pressed="false"><span>0:52</span><strong>Challenges</strong></button>
             <button class="video-chapter" data-time="98.599" aria-pressed="false"><span>1:38</span><strong>Method</strong></button>
-            <button class="video-chapter" data-time="161.5" aria-pressed="false"><span>2:41</span><strong>Observed views</strong><small>training trajectory, vs. RTG-SLAM, VarSplat, CaRtGS, SplaTAM</small></button>
-            <button class="video-chapter" data-time="206.3" aria-pressed="false"><span>3:26</span><strong>Novel views</strong><small>held-out trajectory</small></button>
+            <button class="video-chapter" data-time="161.5" aria-pressed="false"><span>2:41</span><strong>Observed views</strong></button>
+            <button class="video-chapter" data-time="206.3" aria-pressed="false"><span>3:26</span><strong>Novel views</strong></button>
             <button class="video-chapter" data-time="259.97" aria-pressed="false"><span>4:19</span><strong>Live mapping demo</strong></button>
           </div>
           <button class="text-link" id="use-720p">Smaller file (720p, 19 MB) <span aria-hidden="true">↓</span></button>
         </aside>
       </div>
-      <p class="caption">Per-frame PSNR overlays in the video are illustrative for the shown frames; reported metrics are in the Results section. The live demo shows mapping while the sequence plays; measured real-time factors (1.78× with tracked poses on TUM fr3) are in the Results chart, and sustained real-time operation depends on the workload.</p>
+      <p class="caption">PSNR overlays are per-frame and illustrative; measured results, including EliGSiR's 1.78× real-time factor with live-tracked poses on TUM fr3, are in Results.</p>
     </section>
 
     <section class="explore-section wrap" id="explore" aria-labelledby="explore-title">
-      <div class="section-heading"><div><p class="eyebrow section-number">02 / EXPLORE</p><h2 id="explore-title">Step inside<br class="mobile-only"> the reconstruction.</h2></div><p>Not just a render.<br> Explore actual Gaussian map exports in your browser.</p></div>
+      <div class="section-heading"><div><p class="eyebrow section-number">02 / EXPLORE</p><h2 id="explore-title">Step inside<br class="mobile-only"> the reconstruction.</h2></div><p>Explore actual Gaussian map exports in your browser.</p></div>
       <div class="scene-strip" role="group" aria-label="Scene">
         <span class="mini-label">SCENE</span>
-        <button class="scene-chip selected" data-scene="fr3" aria-pressed="true"><span>TUM RGB-D fr3 <small>long_office_household</small></span></button>
-        <button class="scene-chip" data-scene="kitchen1" aria-pressed="false"><span>Orbbec kitchen1 <small>real sensor</small></span></button>
-        <button class="scene-chip" data-scene="scannetpp" aria-pressed="false"><span>ScanNet++ <small>8b5caf3398</small></span></button>
-        <button class="scene-chip" data-scene="room2" aria-pressed="false"><span>Replica <small>room2</small></span></button>
-        <button class="scene-chip" data-scene="office0" aria-pressed="false"><span>Replica <small>office0</small></span></button>
+        <button class="scene-chip selected" data-scene="fr3" aria-pressed="true"><span>TUM fr3</span></button>
+        <button class="scene-chip" data-scene="kitchen1" aria-pressed="false"><span>kitchen1</span></button>
+        <button class="scene-chip" data-scene="scannetpp" aria-pressed="false"><span>ScanNet++</span></button>
+        <button class="scene-chip" data-scene="room2" aria-pressed="false"><span>Replica room2</span></button>
+        <button class="scene-chip" data-scene="office0" aria-pressed="false"><span>Replica office0</span></button>
       </div>
       <div class="viewer-shell" id="viewer-shell">
         <div class="viewer-topline"><span class="viewer-scene"><span class="status-dot" aria-hidden="true"></span><span id="viewer-scene-name">TUM RGB-D fr3/long_office_household</span></span><span class="viewer-kind">EliGSiR map export · interactive 3D</span></div>
@@ -124,14 +125,13 @@
           <div class="viewer-failure" id="viewer-failure" hidden><h3>Use the overview video on this device.</h3><p id="viewer-error-text">The browser could not initialize the 3D renderer.</p><a class="button light" href="#video">Watch the overview <span aria-hidden="true">↓</span></a></div>
           <div id="viewer-mount"></div>
         </div>
-        <div class="viewer-toolbar"><p><span>Drag</span> to orbit <i></i><span>Scroll</span> to zoom <i></i><span>Right-drag</span> to pan</p><div><button class="viewer-tool" id="reset-viewer" disabled><span aria-hidden="true">↺</span> Reset</button><button class="viewer-tool" id="fullscreen-viewer"><span aria-hidden="true">⛶</span> Fullscreen</button><button class="viewer-tool" id="unload-viewer" hidden>Exit 3D</button></div></div>
+        <div class="viewer-toolbar"><p><span>Drag</span> to orbit <i></i><span>Scroll</span> to zoom <i></i><span>Right-drag</span> to pan</p><div><button class="viewer-tool" id="reset-viewer" disabled><span aria-hidden="true">↺</span> Reset</button><button class="viewer-tool" id="fullscreen-viewer"><span aria-hidden="true">⛶</span> Fullscreen</button><button class="viewer-tool" id="unload-viewer" hidden>Exit 3D</button><span class="viewer-credit">Viewer: SuperSplat / PlayCanvas</span></div></div>
       </div>
-      <div class="viewer-under"><span><strong>One scene at a time. Free exploration.</strong> These are fixed reconstructed maps, not a live mapping session. No PSNR numbers are shown here.</span><span>Viewer powered by SuperSplat / PlayCanvas</span></div>
     </section>
 
     <section class="method-section section-space" id="method" aria-labelledby="method-title">
       <div class="wrap">
-        <div class="section-heading"><div><p class="eyebrow section-number">03 / THE IDEA</p><h2 id="method-title">One budget.<br> Three decisions.</h2></div><p>Which observation deserves the next optimizer update?<br> EliGSiR revisits that question as the map changes.</p></div>
+        <div class="section-heading"><div><p class="eyebrow section-number">03 / THE IDEA</p><h2 id="method-title">One budget. Three decisions.</h2></div></div>
         <figure class="wide-figure">
           <button class="figure-button flush" data-lightbox="assets/paper-figures/fig2-method.webp" data-caption="Method overview." aria-label="Expand method overview figure"><img src="assets/paper-figures/fig2-method.webp" width="2385" height="1058" alt="Method overview: retained observations, measured mapping cost and RGB-D evidence feed the three decisions" loading="lazy"></button>
           <span class="tap-hint">Tap to enlarge</span>
@@ -143,22 +143,22 @@
           <button class="decision-tab coral" id="tab-growth" role="tab" aria-selected="false" aria-controls="panel-growth" tabindex="-1"><span class="decision-index">03</span><span class="decision-label">Where to grow?<small>Targeted Geometry Growth</small></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
         </div>
         <div class="method-panel" id="panel-replay" role="tabpanel" aria-labelledby="tab-replay" tabindex="0">
-          <div class="method-copy"><span class="pill blue-soft">Map-Guided View Scheduling</span><h3>Admission is not<br> the same as replay.</h3><p>A pose-based pre-filter and map-based overlap check admit views cheaply, with a maximum-gap rule instead of a fixed keyframe stride. Admission is not permanent: an active supervision set plus retained views, where retained views return to supervision when useful.</p><p class="small muted">Training-render errors accumulate in fixed world-space microcells and raise the replay priority of views covering weak or regressed regions.</p></div>
-          <div class="replay-demo diagram" id="replay-diagram"><span class="diagram-label">REAL INPUT FRAMES · SCHEMATIC FLOW</span><div class="replay-flow"><span class="mini-label">RETAINED VIEWS</span><div class="filmstrip"><figure><img src="assets/real/fr3-frame-a.webp" alt="TUM RGB-D fr3 input frame A" loading="lazy"><figcaption>TUM fr3 input frame A</figcaption></figure><figure id="replay-picked"><img src="assets/real/fr3-frame-b.webp" alt="TUM RGB-D fr3 input frame B" loading="lazy"><figcaption>TUM fr3 input frame B</figcaption></figure><figure><img src="assets/real/fr3-frame-c.webp" alt="TUM RGB-D fr3 input frame C" loading="lazy"><figcaption>TUM fr3 input frame C</figcaption></figure></div><div class="replay-connector"><span class="connector-label">training-render residuals → replay priority</span></div><figure class="replay-map"><img src="assets/paper-figures/fig5-scheduling.svg" alt="Top-down world-space microcell grid used to prioritize replay, from the paper's Fig. 5" loading="lazy"><figcaption>Paper Fig. 5 · endpoint microcell quality: full method, w/o scheduling, and their difference</figcaption></figure></div></div>
+          <div class="method-copy"><span class="pill blue-soft">Map-Guided View Scheduling</span><h3>Admission is not<br> the same as replay.</h3><p>A pose-based pre-filter and map-based overlap check admit views cheaply, using a maximum-gap rule instead of a fixed stride. Admission isn't permanent: retained views return to supervision when useful, prioritized by training-render errors accumulated in fixed world-space microcells over weak or regressed regions.</p></div>
+          <div class="replay-demo diagram" id="replay-diagram"><span class="diagram-label">TUM FR3 INPUT FRAMES → REPLAY PRIORITY</span><div class="replay-flow"><div class="filmstrip"><figure><img src="assets/real/fr3-frame-a.webp" alt="TUM RGB-D fr3 input frame A" loading="lazy"><figcaption>TUM fr3 input frame A</figcaption></figure><figure id="replay-picked"><img src="assets/real/fr3-frame-b.webp" alt="TUM RGB-D fr3 input frame B" loading="lazy"><figcaption>TUM fr3 input frame B</figcaption></figure><figure><img src="assets/real/fr3-frame-c.webp" alt="TUM RGB-D fr3 input frame C" loading="lazy"><figcaption>TUM fr3 input frame C</figcaption></figure></div><div class="replay-connector"><span class="connector-label">training-render residuals → replay priority</span></div><figure class="replay-map"><img src="assets/paper-figures/fig5-scheduling.svg" alt="Top-down world-space microcell grid used to prioritize replay, from the paper's Fig. 5" loading="lazy"><figcaption>Paper Fig. 5 · endpoint microcell quality: full method, w/o scheduling, and their difference. Aggregate quality stays similar while several weak regions improve by more than 10 dB.</figcaption></figure></div></div>
         </div>
         <div class="method-panel" id="panel-fidelity" role="tabpanel" aria-labelledby="tab-fidelity" tabindex="0" hidden>
           <div class="method-copy"><span class="pill green-soft">Load-Adaptive Fidelity</span><h3>Less detail now.<br> More when it fits.</h3><p>The scheduler measures recent mapping cost and picks from a small set of discrete resolutions (1/8× … 1×). The decision is reversible: source RGB-D stays intact and intrinsics are scaled with the grid.</p><label class="range-label" for="workload">Illustrative mapping pressure <output id="pressure-value">Low</output></label><input class="themed-range" type="range" id="workload" min="0" max="3" value="0" step="1"><div class="range-endpoints"><span>Low</span><span>High</span></div></div>
-          <div class="fidelity-demo diagram"><span class="diagram-label">REAL TUM FR3 FRAME AT EACH SUPERVISION SCALE · CONTROLLER BEHAVIOUR ILLUSTRATIVE</span><div class="fidelity-top"><span>Supervision grid</span><strong id="fidelity-value">1×</strong></div><div class="fidelity-image"><img id="fidelity-image" src="assets/real/fidelity-1x.webp" alt="Real TUM fr3 frame at native supervision resolution"></div><div class="fidelity-tiers"><span class="selected" data-tier="0">1×<small>Native</small></span><span data-tier="1">1/2×<small>Half</small></span><span data-tier="2">1/4×<small>Quarter</small></span><span data-tier="3">1/8×<small>Eighth</small></span></div><p>Try low → high → low. The decision is reversible.</p></div>
+          <div class="fidelity-demo diagram"><span class="diagram-label">REAL TUM FR3 FRAME · ILLUSTRATIVE CONTROLLER</span><div class="fidelity-top"><span>Supervision grid</span><strong id="fidelity-value">1×</strong></div><div class="fidelity-image"><img id="fidelity-image" src="assets/real/fidelity-1x.webp" alt="Real TUM fr3 frame at native supervision resolution"></div><div class="fidelity-tiers"><span class="selected" data-tier="0">1×<small>Native</small></span><span data-tier="1">1/2×<small>Half</small></span><span data-tier="2">1/4×<small>Quarter</small></span><span data-tier="3">1/8×<small>Eighth</small></span></div><p>Try low → high → low. The decision is reversible.</p></div>
         </div>
         <div class="method-panel" id="panel-growth" role="tabpanel" aria-labelledby="tab-growth" tabindex="0" hidden>
-          <div class="method-copy"><span class="pill coral-soft">Targeted Geometry Growth</span><h3>Depth can supervise<br> without adding geometry.</h3><p>Sparse structural support comes first, from a bounded set of depth-derived Gaussians. On revisits, insertion is suppressed where the map already explains observations and directed to unsupported or misplaced regions; depth otherwise supervises existing geometry without adding primitives.</p><p class="small muted">3DGS-MCMC handles relocation, replacement and densification — that mechanism is not a contribution of this work.</p><div class="growth-controls" role="group" aria-label="Geometry evidence"><button data-growth="supported" aria-pressed="true">Supported</button><button data-growth="single" aria-pressed="false">One view</button><button data-growth="confirmed" aria-pressed="false">Multi-view</button></div></div>
+          <div class="method-copy"><span class="pill coral-soft">Targeted Geometry Growth</span><h3>Depth can supervise<br> without adding geometry.</h3><p>Sparse structural support comes first, from a bounded set of depth-derived Gaussians. On revisits, insertion is suppressed where the map already explains observations and directed to unsupported or misplaced regions; otherwise depth supervises existing geometry without adding primitives. 3DGS-MCMC handles relocation, replacement and densification; it is not a contribution of this work.</p><div class="growth-controls" role="group" aria-label="Geometry evidence"><button data-growth="supported" aria-pressed="true">Supported</button><button data-growth="single" aria-pressed="false">One view</button><button data-growth="confirmed" aria-pressed="false">Multi-view</button></div></div>
           <div class="growth-demo diagram" data-growth="supported"><span class="diagram-label">SCHEMATIC · SIDE VIEW</span><svg viewBox="0 0 600 330" class="growth-svg" role="img" aria-labelledby="growth-svg-title"><title id="growth-svg-title">Depth evidence and geometry insertion schematic</title><defs><marker id="ray-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="currentColor"/></marker></defs><path class="surface" d="M435 65Q406 145 441 180T426 280"/><g class="old-gaussians"><ellipse cx="431" cy="112" rx="17" ry="38" transform="rotate(12 431 112)"/><ellipse cx="431" cy="181" rx="20" ry="38" transform="rotate(-20 431 181)"/><ellipse cx="435" cy="250" rx="18" ry="32"/></g><g class="camera-one"><path d="m89 144 35-15v52l-35-15z"/><circle cx="79" cy="155" r="12"/><path class="ray" d="M124 155h288" marker-end="url(#ray-arrow)"/></g><g class="camera-two"><path d="m172 270 29-23 20 37-36 5z"/><circle cx="165" cy="288" r="12"/><path class="ray" d="m213 263 213-106" marker-end="url(#ray-arrow)"/></g><g class="new-gaussians"><ellipse cx="427" cy="155" rx="13" ry="27"/><ellipse cx="438" cy="208" rx="11" ry="22"/></g><circle class="depth-measurement" cx="427" cy="155" r="7"/><text x="55" y="206">Depth observation</text><text x="408" y="38">Surface</text><text x="143" y="324" class="second-label">Second view</text></svg><div class="growth-outcome"><span class="outcome-dot"></span><strong id="growth-outcome">Supervise existing</strong><span id="growth-detail">The current map already supports this surface.</span></div></div>
         </div>
       </div>
     </section>
 
     <section class="results-section wrap section-space" id="results" aria-labelledby="results-title">
-      <div class="section-heading"><div><p class="eyebrow section-number">04 / RESULTS</p><h2 id="results-title">Quality.<br> And the time it takes.</h2></div><p>Online mapping, refinement and per-scene endpoints are different budgets.<br> Keep them separate.</p></div>
+      <div class="section-heading"><div><p class="eyebrow section-number">04 / RESULTS</p><h2 id="results-title">Quality. And the time it takes.</h2></div></div>
       <div class="result-tabs" role="tablist" aria-label="Result view"><button id="tab-rtf" role="tab" aria-controls="panel-rtf" aria-selected="true" tabindex="0">Real-time factor (TUM fr3)</button><button id="tab-scenes" role="tab" aria-controls="panel-scenes" aria-selected="false" tabindex="-1">Across scenes</button><button id="tab-refinement" role="tab" aria-controls="panel-refinement" aria-selected="false" tabindex="-1">Continued refinement</button></div>
       <p class="caution-note">Table I, the refinement study and the ablations use separate runs and evaluation splits; absolute PSNR values should not be compared across these blocks.</p>
 
@@ -172,7 +172,6 @@
           <div class="metric-line"><strong id="selected-psnr">21.52</strong><span>dB<br> PSNR</span></div>
           <div class="metric-line time"><strong id="selected-time">176.1</strong><span>seconds<br> <span id="selected-rtf">2.02×</span> RTF</span></div>
           <p class="small muted">SSIM <span id="selected-ssim">0.757</span> · LPIPS <span id="selected-lpips">0.320</span></p>
-          <p>Hover, tap or focus a point to inspect a method.</p>
           <a href="assets/data/results.json" class="text-link" download>Download result data <span aria-hidden="true">↓</span></a>
         </div>
       </div>
@@ -199,31 +198,31 @@
     </section>
 
     <section class="during-section wrap section-space" id="during" aria-labelledby="during-title">
-      <div class="section-heading"><div><p class="eyebrow section-number">05 / DURING MAPPING</p><h2 id="during-title">How soon is a region useful?</h2></div><p>Regional metrics over fixed 0.5 m world-space cells.</p></div>
-      <p>CVQ = mean cell PSNR over currently evaluable cells. CUC@20 = fraction of evaluable cells at or above 20 dB. CVQ-AUC integrates CVQ over source progress. Missing renders count as failures.</p>
+      <div class="section-heading"><div><p class="eyebrow section-number">05 / DURING MAPPING</p><h2 id="during-title">How soon is a region useful?</h2></div></div>
+      <p>CVQ is mean PSNR over currently evaluable 0.5 m world-space cells, CUC@20 the fraction at or above 20 dB, and CVQ-AUC integrates CVQ over source progress, counting missing renders as failures.</p>
       <div class="during-grid">
         <article><button class="figure-button" data-lightbox="assets/paper-figures/fig4-cvq.svg" data-caption="CVQ over mapping time." aria-label="Expand CVQ over mapping time figure"><img src="assets/paper-figures/fig4-cvq.svg" alt="CVQ over mapping time, full method vs. ablations" loading="lazy"></button><p class="caption">Full method CVQ-AUC 21.18 dB vs. 20.62 dB w/o Load-Adaptive Fidelity and 20.84 dB w/o Targeted Geometry Growth (TUM fr3).</p></article>
         <article><button class="figure-button" data-lightbox="assets/paper-figures/fig6-fidelity.svg" data-caption="Load-Adaptive Fidelity controller behaviour." aria-label="Expand fidelity controller figure"><img src="assets/paper-figures/fig6-fidelity.svg" alt="Load-Adaptive Fidelity controller resolution over time" loading="lazy"></button><p class="caption">The controller moves between 1/8×, 1/4×, 1/2× and 1× as backlog changes; cumulative supervision 2786.9 M → 398.2 M px (7.0×); mapping time 103.34 s → 89.15 s.</p></article>
-        <article><button class="figure-button" data-lightbox="assets/paper-figures/fig5-scheduling.svg" data-caption="Map-Guided View Scheduling microcell grid." aria-label="Expand scheduling figure"><img src="assets/paper-figures/fig5-scheduling.svg" alt="Top-down microcell grid showing replay-driven quality improvement" loading="lazy"></button><p class="caption">Top-down microcell grid: aggregate quality stays similar while several weak regions improve by more than 10 dB.</p></article>
       </div>
       <div class="table-scroll" id="ablations-table-wrap" tabindex="0" role="region" aria-label="Ablation table"><!-- static:ablations-table -->
 <noscript><table><caption>Component ablations · final paper Table III</caption><thead><tr><th scope="col">Variant</th><th scope="col">PSNR &uarr;</th><th scope="col">CVQ-AUC &uarr;</th><th scope="col">CUC@20 &uarr; [%]</th><th scope="col">Sup. px [M] &darr;</th><th scope="col">Gaussians [k]</th></tr></thead><tbody><tr class="table-group-row"><th colspan="6" scope="colgroup">TUM RGB-D fr3/long_office_household</th></tr><tr class="eligsir-row"><th scope="row">EliGSiR</th><td>18.50 dB</td><td>21.18 dB</td><td>69.2</td><td>398.2</td><td>140.1</td></tr><tr><th scope="row">w/o adaptive fidelity</th><td>19.36 dB</td><td>20.62 dB</td><td>65.4</td><td>2,786.9</td><td>549.5</td></tr><tr><th scope="row">w/o targeted growth</th><td>17.78 dB</td><td>20.84 dB</td><td>63.1</td><td>330.9</td><td>120.5</td></tr><tr class="table-group-row"><th colspan="6" scope="colgroup">ScanNet++ 8b5caf3398</th></tr><tr class="eligsir-row"><th scope="row">EliGSiR</th><td>18.71 dB</td><td>16.28 dB</td><td>23.2</td><td>17,559.6</td><td>366.5</td></tr><tr><th scope="row">w/o adaptive fidelity</th><td>18.58 dB</td><td>16.36 dB</td><td>16.4</td><td>25,613.1</td><td>341.5</td></tr><tr><th scope="row">w/o targeted growth</th><td>18.59 dB</td><td>16.59 dB</td><td>17.7</td><td>14,242.3</td><td>1,108.8</td></tr><tr class="table-group-row"><th colspan="6" scope="colgroup">Orbbec kitchen1</th></tr><tr class="eligsir-row"><th scope="row">EliGSiR</th><td>18.25 dB</td><td>19.75 dB</td><td>55.3</td><td>285.6</td><td>123.9</td></tr><tr><th scope="row">w/o adaptive fidelity</th><td>22.91 dB</td><td>20.44 dB</td><td>77.9</td><td>2,267.1</td><td>565.0</td></tr><tr><th scope="row">w/o targeted growth</th><td>18.63 dB</td><td>19.55 dB</td><td>53.3</td><td>276.9</td><td>70.7</td></tr></tbody></table></noscript>
 <!-- /static:ablations-table --></div>
       <p class="caption" id="ablations-note"></p>
-      <p class="caption">Fixed native-resolution supervision reaches a higher endpoint PSNR on TUM (19.36 vs 18.50 dB; also on kitchen1 in Table III); adaptive fidelity trades endpoint score for online quality at far less image-space work.</p>
-      <p class="caption">Targeted Geometry Growth raises CUC@20 by 6.1, 5.5 and 2.0 pp on TUM, ScanNet++ and kitchen1, and on ScanNet++ shrinks the map from 1.109 M to 366.5 k Gaussians at similar PSNR.</p>
+      <p class="caption">Fixed native resolution reaches a higher endpoint PSNR on TUM (19.36 vs 18.50 dB) and kitchen1 (22.91 vs 18.25 dB) at far more image-space work. Targeted Geometry Growth raises CUC@20 by 6.1/5.5/2.0 pp on TUM/ScanNet++/kitchen1, shrinking the ScanNet++ map from 1.109 M to 366.5 k Gaussians at similar PSNR.</p>
     </section>
 
     <section class="compare-section section-space" id="compare" aria-labelledby="compare-title"><div class="wrap">
-      <div class="section-heading"><div><p class="eyebrow section-number">06 / LOOK CLOSER</p><h2 id="compare-title">See the difference.</h2></div><p>Drag the divider. Change the view.<br> Inspect the paper's qualitative comparisons.</p></div>
-      <div class="scene-strip" role="group" aria-label="Comparison group" id="compare-groups">
-        <span class="mini-label">GROUP</span>
-        <button class="scene-chip selected" data-group="fr3-1152" aria-pressed="true"><span>TUM fr3 <small>view 1152</small></span></button>
-        <button class="scene-chip" data-group="kitchen1-865" aria-pressed="false"><span>kitchen1 <small>source 865</small></span></button>
-        <button class="scene-chip" data-group="scannet" aria-pressed="false"><span>ScanNet <small>views 48/2624/5872</small></span></button>
-        <button class="scene-chip" data-group="scannetpp" aria-pressed="false"><span>ScanNet++ <small>views 8/5624/6752</small></span></button>
+      <div class="section-heading"><div><p class="eyebrow section-number">06 / LOOK CLOSER</p><h2 id="compare-title">See the difference.</h2></div><p>Drag the divider to inspect the paper's qualitative comparisons.</p></div>
+      <div class="compare-toolbar">
+        <div class="scene-strip" role="group" aria-label="Comparison group" id="compare-groups">
+          <span class="mini-label">GROUP</span>
+          <button class="scene-chip selected" data-group="fr3-1152" aria-pressed="true"><span>TUM fr3 · 1152</span></button>
+          <button class="scene-chip" data-group="kitchen1-865" aria-pressed="false"><span>kitchen1 · 865</span></button>
+          <button class="scene-chip" data-group="scannet" aria-pressed="false"><span>ScanNet</span></button>
+          <button class="scene-chip" data-group="scannetpp" aria-pressed="false"><span>ScanNet++</span></button>
+        </div>
+        <div class="compare-controls"><div class="compare-context"><span class="mini-label">BASELINE</span><strong id="compare-baseline-label">CaRtGS</strong></div><div class="mode-tabs" role="group" aria-label="Comparison modality"><button data-mode="rgb" aria-pressed="true">RGB</button><button data-mode="depth" aria-pressed="false">Depth</button></div></div>
       </div>
-      <div class="compare-toolbar"><div class="compare-context"><span class="mini-label">BASELINE</span><strong id="compare-baseline-label">CaRtGS</strong></div><div class="mode-tabs" role="group" aria-label="Comparison modality"><button data-mode="rgb" aria-pressed="true">RGB</button><button data-mode="depth" aria-pressed="false">Depth</button></div></div>
       <div class="comparison-grid"><div class="compare-main"><div class="comparison" id="comparison" style="--wipe:50%"><img class="comparison-ours" id="comparison-ours" src="assets/qualitative/fr3-1152-eligsir-rgb.webp" alt="EliGSiR RGB rendering" width="541" height="405" loading="lazy"><img class="comparison-baseline" id="comparison-baseline" src="assets/qualitative/fr3-1152-cartgs-rgb.webp" alt="CaRtGS RGB rendering of the same view" width="541" height="405" loading="lazy"><span class="image-label baseline-label" id="comparison-baseline-tag">CaRtGS · PSNR 26.23 dB</span><span class="image-label ours-label" id="comparison-ours-tag">EliGSiR · PSNR 26.71 dB</span><div class="wipe-line" aria-hidden="true"><span>‹ <i></i> ›</span></div><input type="range" id="compare-wipe" min="0" max="100" value="50" step="1" aria-label="Reveal baseline on the left and EliGSiR on the right"><div class="missing-modality" id="missing-modality" hidden><span class="placeholder-icon" aria-hidden="true">＋</span><span class="mini-label">NOT COMPARED</span><h3 id="missing-mode-title">Depth</h3><p id="missing-mode-reason"></p><button class="button secondary" id="return-rgb">Return to RGB</button></div></div><div class="comparison-footer"><p id="comparison-caption">TUM fr3 · view 1152 · matched viewpoint</p><button class="text-link" id="toggle-comparison" aria-pressed="false">Side by side <span aria-hidden="true">⇄</span></button></div><img class="depth-colorbar" id="depth-colorbar" src="assets/qualitative/depth-colorbar-0.3-5m.webp" alt="Metric depth colorbar, 0.3 to 5.0 metres" hidden><p class="caption depth-colorbar-caption" id="depth-colorbar-caption" hidden>Metric depth (m), shared range 0.3–5.0</p></div><aside class="reference-panel"><div class="reference-heading"><span class="mini-label">REFERENCE RGB</span><span class="small muted">GT</span></div><button class="reference-expand" data-lightbox="assets/qualitative/fr3-1152-reference-rgb.webp" data-caption="Reference RGB · view 1152" id="reference-expand" aria-label="Enlarge current reference image"><img id="reference-image" src="assets/qualitative/fr3-1152-reference-rgb.webp" alt="Reference RGB image" width="541" height="405" loading="lazy"><span aria-hidden="true">⤢</span></button><span class="mini-label select-label" id="select-view-label">SELECT A VIEW</span><div id="reference-views" class="reference-views"></div></aside></div>
       <div class="comparison-disclosure"><span class="small-pill">Qualitative preview</span><p>Panels from the paper's Figs. 7 and 8, matched viewpoints; depth uses one shared metric range.</p><button class="text-link" id="show-fig8" data-lightbox="assets/paper-figures/fig8-qualitative.webp" data-caption="Full Fig. 8, qualitative comparison">View full Fig. 8 <span aria-hidden="true">⤢</span></button></div>
       <p class="caption dataset-credit">Datasets: TUM RGB-D, Replica, ScanNet, ScanNet++ and real-sensor Orbbec recordings; images © their respective dataset licences.</p>
@@ -231,7 +230,7 @@
 
     <section class="resources-section wrap section-space" id="paper" aria-labelledby="paper-title">
       <span id="resources" class="sr-only" aria-hidden="true"></span>
-      <div class="section-heading"><div><p class="eyebrow section-number">07 / PAPER &amp; CODE</p><h2 id="paper-title">Read the paper.<br> Code follows on acceptance.</h2></div><p>Anonymous review version. The mapping core, ROS 2 integration and RGB-D synchronization packages will be released upon acceptance.</p></div>
+      <div class="section-heading"><div><p class="eyebrow section-number">07 / PAPER &amp; CODE</p><h2 id="paper-title">Paper &amp; code</h2></div><p>Anonymous review version; code is released upon acceptance.</p></div>
       <div class="paper-card">
         <div class="paper-card-top"><span class="mini-label">PAPER</span><a class="button secondary" href="assets/paper/eligsir-anonymous.pdf">Paper (PDF, 1.3 MB) <span aria-hidden="true">↓</span></a></div>
         <div class="bibtex-block"><pre tabindex="0" role="region" aria-label="BibTeX entry"><code id="bibtex-text">@misc{eligsir2027,
@@ -247,11 +246,11 @@
         <article class="resource-card"><span class="mini-label">ROS 2 TRANSPORT</span><div><h3>eligsir-ros2</h3></div><p>ROS ingress, lifecycle and mapping integration.</p><span class="resource-tag">Released upon acceptance</span></article>
         <article class="resource-card"><span class="mini-label">SENSOR SYNCHRONIZATION</span><div><h3>eligsir-rgbd-sync</h3></div><p>RGB-D synchronization and shared message contracts.</p><span class="resource-tag">Released upon acceptance</span></article>
       </div>
-      <p class="implementation-note">PyTorch + gsplat, CUDA and ROCm; runs on NVIDIA and AMD GPUs including AMD Strix Halo; available as a ROS 2 package; poses from ground truth, visual odometry or a SLAM frontend.</p>
+      <p class="implementation-note">PyTorch + gsplat on CUDA or ROCm (incl. AMD Strix Halo), as a ROS 2 package; poses from ground truth, VO or a SLAM frontend.</p>
       <details class="scope-details"><summary>Scope &amp; limitations <span aria-hidden="true">＋</span></summary><p>Real-time operation depends on sustained workload and currently needs manual tuning of several runtime parameters. Representation size grows with the explored scene. The method assumes a predominantly static scene and a sufficiently consistent trajectory; pose errors, dynamic objects and unreliable depth can produce inconsistent geometry.</p></details>
     </section>
   </main>
-  <footer class="site-footer"><div class="wrap footer-inner"><a href="#top" class="brand" aria-label="Back to EliGSiR home"><img src="assets/brand/logo-dark.svg" width="154" height="38" alt="EliGSiR" loading="lazy"></a><span>Anonymous ICRA 2027 submission<br> <small>Research code &amp; supplementary visual material</small></span><a href="THIRD_PARTY.md">Third-party notices <span aria-hidden="true">↗</span></a><a href="#top" class="back-top" aria-label="Back to top">↑</a></div></footer>
+  <footer class="site-footer"><div class="wrap footer-inner"><a href="#top" class="brand" aria-label="Back to EliGSiR home"><img src="assets/brand/logo-dark.svg" width="154" height="38" alt="EliGSiR" loading="lazy"></a><span>Anonymous ICRA 2027 submission</span><a href="THIRD_PARTY.md">Third-party notices <span aria-hidden="true">↗</span></a><a href="#top" class="back-top" aria-label="Back to top">↑</a></div></footer>
   <dialog id="media-dialog" class="media-dialog" aria-labelledby="dialog-caption"><div class="dialog-top"><p id="dialog-caption">Expanded figure</p><button id="dialog-close" class="icon-button" aria-label="Close expanded figure">×</button></div><img id="dialog-image" alt="Expanded figure"><p class="caption">Use your browser zoom for more detail.</p></dialog>
   <div id="live-announcement" class="sr-only" role="status" aria-live="polite"></div>
   <noscript><div class="noscript-note">JavaScript is disabled. Images, tables and text remain readable. Interactive comparisons and the 3D viewer require JavaScript.</div></noscript>

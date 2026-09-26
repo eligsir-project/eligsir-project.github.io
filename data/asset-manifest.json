@@ -184,6 +184,132 @@
       "sha256": "56a2ca38f2e5ef4b11eaf38dced178fd5942e1de592c5c3d90c1918e02ac7283"
     },
     {
+      "path": "assets/qualitative/fr3-traj0280-cartgs.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 57712,
+      "sha256": "b539bc11dcdc5828bc855ec002d713126c5012cd06d69fd3c658122dc6b351d0"
+    },
+    {
+      "path": "assets/qualitative/fr3-traj0280-eligsir.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 55570,
+      "sha256": "795c9dfb9533219eb93f925e1cc8f3f27d1b83ba39e8f94ca54302ebdba1e32c"
+    },
+    {
+      "path": "assets/qualitative/fr3-traj0280-reference.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 78568,
+      "sha256": "542c5e5f93498cde8e44f471a4ceffaa7f2005b83b683cf04538934fb207c529"
+    },
+    {
+      "path": "assets/qualitative/fr3-traj0330-eligsir.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 57334,
+      "sha256": "64e5985c394227bcbb31151824a27bf232fa78c9ee0069740e332c33c63076e6"
+    },
+    {
+      "path": "assets/qualitative/fr3-traj0330-reference.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 69750,
+      "sha256": "3aa6981edac5996bd9f588e9d8ec0b1c427e9f4de09ee3b23c6330263c8d0d62"
+    },
+    {
+      "path": "assets/qualitative/fr3-traj0330-splatam.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 72342,
+      "sha256": "6a14f76ebd78b5bcf995e00fcfcd8aa01359afd0dcf2092a9946e8e299f10e3a"
+    },
+    {
+      "path": "assets/qualitative/fr3-traj0705-cartgs.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 32872,
+      "sha256": "84ff4a167aa8c03d372c2589c6789d12c2b69fb4ffbd01a09e9a6b5bc7c87afb"
+    },
+    {
+      "path": "assets/qualitative/fr3-traj0705-eligsir.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 36120,
+      "sha256": "c163d25f6125141446111d68bff6cca83348352e2c4057caca73e1fc0c0209cf"
+    },
+    {
+      "path": "assets/qualitative/fr3-traj0705-reference.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 73670,
+      "sha256": "f464ee93f418a913b08d6cc5cf312c361a51108927cb22598df8f36c55492b7e"
+    },
+    {
+      "path": "assets/qualitative/fr3-traj1065-eligsir.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 24052,
+      "sha256": "60e95e2e9f90936dc43166b608fe6f1b8c1f4f3350a3c3255185c27516fb606b"
+    },
+    {
+      "path": "assets/qualitative/fr3-traj1065-reference.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 57226,
+      "sha256": "ac7fd712f430c5d1221b94c331bb7ca6ba0ac4a3fd3427a83d368a4efdfbc3d7"
+    },
+    {
+      "path": "assets/qualitative/fr3-traj1065-splatam.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 41280,
+      "sha256": "3afcba1fbfdf98b4a0aef28de3cc77760a06e0044be1924ad1202d91852950b6"
+    },
+    {
+      "path": "assets/qualitative/fr3-traj1880-eligsir.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 25294,
+      "sha256": "8968de80ce5b1a6116ca751c68f99fb92a583ae9f53286843a1592f319f58ac9"
+    },
+    {
+      "path": "assets/qualitative/fr3-traj1880-reference.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 49158,
+      "sha256": "c2de1e108c8fcd45c2658476fa61da42082d8100e00cc83a7bedb774597a00f4"
+    },
+    {
+      "path": "assets/qualitative/fr3-traj1880-splatam.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 37502,
+      "sha256": "0824747e85ae224256e5c2a078d8e0526ac85f0a2ac480235198dd245312bc6f"
+    },
+    {
+      "path": "assets/qualitative/fr3-traj2570-cartgs.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 43120,
+      "sha256": "8a4bac4bda88c0b0d1c8aafbaf648c557f7c8c3e869684fd6a372fdd4d873828"
+    },
+    {
+      "path": "assets/qualitative/fr3-traj2570-eligsir.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 46902,
+      "sha256": "bd114508e7da07dc792025fc0e750e5563e9e4f94a4d65a10f8c1fd90eba0f6b"
+    },
+    {
+      "path": "assets/qualitative/fr3-traj2570-reference.webp",
+      "role": "Website media",
+      "notes": "Local supplied or derived website asset; no external loading.",
+      "bytes": 69688,
+      "sha256": "a00fc322fb5efa7ec9d56d2495cd735c4f40c7d0e3bcda50caee1bf2fc674fbe"
+    },
+    {
       "path": "assets/qualitative/kitchen1-865-cartgs-depth.webp",
       "role": "Website media",
       "notes": "Local supplied or derived website asset; no external loading.",

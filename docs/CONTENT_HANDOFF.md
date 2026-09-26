@@ -41,3 +41,11 @@ Media never automatically trains or modifies the map. The heavy model and render
 ## Release checks outside this ZIP
 
 Validate public repository access, conference supplementary-material rules, organization/activity anonymity, author consent and dataset/media redistribution terms. Review any future image metadata, SVG editor paths, PDF properties and video metadata before copying them into `assets/`. This package does not publish or modify GitHub resources.
+
+## Trajectory comparisons (TUM fr3 · vs CaRtGS / vs SplaTAM)
+
+Frames come from the overview-video render pipeline. Every method's exported map is rendered along the same ground-truth training trajectory as the TUM reference frames, and per-frame PSNR is computed at 640×480 against the raw frames. These are observed views, not held-out views. They were selected for large, visible differences:
+- **CaRtGS: frames 705, 2570, 280.** These have the largest gaps that survive a shift-compensated PSNR check, which rules out misregistration as the cause.
+- **SplaTAM: frames 1065, 330, 1880.**
+
+Averages over all frames are in Results (Table I). The paper's Fig. 1 held-out CaRtGS panels were not used, because their PSNR gap is mostly a small pose offset rather than a visible reconstruction difference.

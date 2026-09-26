@@ -433,6 +433,24 @@ window.ELIGSIR_CONTENT = {
         ]
       },
       {
+        "id": "fr3-cartgs",
+        "label": "TUM fr3 \u00b7 vs CaRtGS",
+        "baseline_label": "CaRtGS",
+        "modes": [
+          "rgb"
+        ],
+        "source": "observed trajectory \u00b7 both maps rendered from the same ground-truth pose \u00b7 per-frame PSNR (640\u00d7480)"
+      },
+      {
+        "id": "fr3-splatam",
+        "label": "TUM fr3 \u00b7 vs SplaTAM",
+        "baseline_label": "SplaTAM",
+        "modes": [
+          "rgb"
+        ],
+        "source": "observed trajectory \u00b7 both maps rendered from the same ground-truth pose \u00b7 per-frame PSNR (640\u00d7480)"
+      },
+      {
         "id": "kitchen1-865",
         "label": "kitchen1 \u00b7 source 865",
         "baseline_label": "CaRtGS",
@@ -483,6 +501,114 @@ window.ELIGSIR_CONTENT = {
         },
         "width": 541,
         "height": 405
+      },
+      {
+        "id": "fr3-cartgs-0705",
+        "group": "fr3-cartgs",
+        "label": "Frame 705",
+        "images": {
+          "reference_rgb": "assets/qualitative/fr3-traj0705-reference.webp",
+          "baseline_rgb": "assets/qualitative/fr3-traj0705-cartgs.webp",
+          "eligsir_rgb": "assets/qualitative/fr3-traj0705-eligsir.webp"
+        },
+        "metrics": {
+          "rgb": {
+            "baseline": "CaRtGS \u00b7 PSNR 17.56 dB",
+            "eligsir": "EliGSiR \u00b7 PSNR 23.45 dB"
+          }
+        },
+        "width": 960,
+        "height": 720
+      },
+      {
+        "id": "fr3-cartgs-2570",
+        "group": "fr3-cartgs",
+        "label": "Frame 2570",
+        "images": {
+          "reference_rgb": "assets/qualitative/fr3-traj2570-reference.webp",
+          "baseline_rgb": "assets/qualitative/fr3-traj2570-cartgs.webp",
+          "eligsir_rgb": "assets/qualitative/fr3-traj2570-eligsir.webp"
+        },
+        "metrics": {
+          "rgb": {
+            "baseline": "CaRtGS \u00b7 PSNR 20.68 dB",
+            "eligsir": "EliGSiR \u00b7 PSNR 26.31 dB"
+          }
+        },
+        "width": 960,
+        "height": 720
+      },
+      {
+        "id": "fr3-cartgs-0280",
+        "group": "fr3-cartgs",
+        "label": "Frame 280",
+        "images": {
+          "reference_rgb": "assets/qualitative/fr3-traj0280-reference.webp",
+          "baseline_rgb": "assets/qualitative/fr3-traj0280-cartgs.webp",
+          "eligsir_rgb": "assets/qualitative/fr3-traj0280-eligsir.webp"
+        },
+        "metrics": {
+          "rgb": {
+            "baseline": "CaRtGS \u00b7 PSNR 21.54 dB",
+            "eligsir": "EliGSiR \u00b7 PSNR 25.35 dB"
+          }
+        },
+        "width": 960,
+        "height": 720
+      },
+      {
+        "id": "fr3-traj1065",
+        "group": "fr3-splatam",
+        "label": "Frame 1065",
+        "images": {
+          "reference_rgb": "assets/qualitative/fr3-traj1065-reference.webp",
+          "baseline_rgb": "assets/qualitative/fr3-traj1065-splatam.webp",
+          "eligsir_rgb": "assets/qualitative/fr3-traj1065-eligsir.webp"
+        },
+        "metrics": {
+          "rgb": {
+            "baseline": "SplaTAM \u00b7 PSNR 16.44 dB",
+            "eligsir": "EliGSiR \u00b7 PSNR 24.76 dB"
+          }
+        },
+        "width": 960,
+        "height": 720
+      },
+      {
+        "id": "fr3-traj0330",
+        "group": "fr3-splatam",
+        "label": "Frame 330",
+        "images": {
+          "reference_rgb": "assets/qualitative/fr3-traj0330-reference.webp",
+          "baseline_rgb": "assets/qualitative/fr3-traj0330-splatam.webp",
+          "eligsir_rgb": "assets/qualitative/fr3-traj0330-eligsir.webp"
+        },
+        "metrics": {
+          "rgb": {
+            "baseline": "SplaTAM \u00b7 PSNR 17.53 dB",
+            "eligsir": "EliGSiR \u00b7 PSNR 25.51 dB"
+          }
+        },
+        "width": 960,
+        "height": 720
+      },
+      {
+        "id": "fr3-traj1880",
+        "group": "fr3-splatam",
+        "label": "Frame 1880",
+        "images": {
+          "reference_rgb": "assets/qualitative/fr3-traj1880-reference.webp",
+          "baseline_rgb": "assets/qualitative/fr3-traj1880-splatam.webp",
+          "eligsir_rgb": "assets/qualitative/fr3-traj1880-eligsir.webp"
+        },
+        "metrics": {
+          "rgb": {
+            "baseline": "SplaTAM \u00b7 PSNR 19.24 dB",
+            "eligsir": "EliGSiR \u00b7 PSNR 26.49 dB"
+          }
+        },
+        "width": 960,
+        "height": 720
       },
       {
         "id": "kitchen1-865",

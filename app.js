@@ -483,8 +483,10 @@
     const view = viewById(selectedView);
     if (!group.modes.includes(selectedMode)) selectedMode = 'rgb';
     if (view.width && view.height) {
-      comparisonEl.style.aspectRatio = view.width + ' / ' + view.height;
-      comparisonEl.style.maxWidth = Math.round(view.width * 1.5) + 'px';
+      // Side by side doubles the width, so the box keeps both images without letterboxing.
+      const across = comparisonEl.classList.contains('side-by-side') ? 2 : 1;
+      comparisonEl.style.aspectRatio = (view.width * across) + ' / ' + view.height;
+      comparisonEl.style.maxWidth = Math.round(view.width * 1.5 * across) + 'px';
     }
     $$('.mode-tabs button').forEach(button => {
       const mode = button.dataset.mode;
@@ -522,7 +524,7 @@
     $('#reference-expand').dataset.caption = 'Reference RGB · ' + group.label + ' · ' + view.label;
     const sceneName = group.label.split(' · ')[0];
     const viewPart = view.label.charAt(0).toLowerCase() + view.label.slice(1);
-    $('#comparison-caption').textContent = sceneName + ' · ' + viewPart + ' · matched viewpoint';
+    $('#comparison-caption').textContent = sceneName + ' · ' + viewPart + ' · ' + (group.source || 'matched viewpoint');
     $$('.reference-view').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.view === selectedView)));
     announce('Comparison: ' + group.label + ', ' + view.label + ', ' + selectedMode + '.');
   }
@@ -548,6 +550,7 @@
     const button = event.currentTarget;
     button.setAttribute('aria-pressed', String(active));
     button.innerHTML = active ? 'Wipe comparison <span aria-hidden="true">⇄</span>' : 'Side by side <span aria-hidden="true">⇄</span>';
+    renderComparison();
   });
   populateReferenceViews();
   renderComparison();

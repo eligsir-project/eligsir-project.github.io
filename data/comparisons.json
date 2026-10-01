@@ -6,26 +6,18 @@
     "caption": "Metric depth (m), shared range 0.3–5.0"
   },
   "default": {
-    "group": "fr3-1152",
+    "group": "fr3-cartgs",
     "view": "fr3-1152",
     "mode": "rgb"
   },
   "groups": [
     {
-      "id": "fr3-1152",
-      "label": "TUM fr3 · view 1152",
-      "baseline_label": "CaRtGS",
-      "modes": [
-        "rgb",
-        "depth"
-      ]
-    },
-    {
       "id": "fr3-cartgs",
       "label": "TUM fr3 · vs CaRtGS",
       "baseline_label": "CaRtGS",
       "modes": [
-        "rgb"
+        "rgb",
+        "depth"
       ],
       "source": "observed trajectory · both maps rendered from the same ground-truth pose · per-frame PSNR (640×480)"
     },
@@ -67,7 +59,7 @@
   "views": [
     {
       "id": "fr3-1152",
-      "group": "fr3-1152",
+      "group": "fr3-cartgs",
       "label": "View 1152",
       "images": {
         "reference_rgb": "assets/qualitative/fr3-1152-reference-rgb.webp",

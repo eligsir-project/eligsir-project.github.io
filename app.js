@@ -308,7 +308,8 @@
   const labelPlacement = {
     'eligsir-tracked': {dx: 16, dy1: -12, dy2: 3, anchor: 'start'},
     'cartgs-tracked': {dx: 16, dy1: 22, dy2: 36, anchor: 'start'},
-    'splatam-gt': {dx: -16, dy1: -6, dy2: 12, anchor: 'end'},
+    'splatam-gt': {dx: 14, dy1: -6, dy2: 12, anchor: 'start'},
+    'rtgslam-gt': {dx: -16, dy1: -6, dy2: 12, anchor: 'end'},
     'varsplat-gt': {dx: -16, dy1: -6, dy2: 12, anchor: 'end'},
   };
   const defaultPlacement = {dx: 16, dy1: -6, dy2: 12, anchor: 'start'};

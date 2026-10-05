@@ -23,9 +23,9 @@
 .footer-copy{font-size:10px;line-height:1.9;color:#bbccd2;margin-top:12px}
 .footer-links{display:flex;align-items:center;gap:20px;margin-top:14px;font-size:10px;color:#bbccd2}
 .footer-links .back-top{width:28px;height:28px;border:1px solid #415963;border-radius:50%;display:grid;place-items:center;font-size:15px}
-.footer-support{min-width:0;padding:20px 24px;border:1px solid #415963;border-radius:10px;background:#ffffff03}
+.footer-support{min-width:0;padding:21px 25px;border-radius:10px;background:#ffffff03}
 .footer-support img{height:25px;width:auto;max-width:100%}
-@media(max-width:640px){.footer-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:20px}.footer-identity{padding-top:17px}.footer-identity .brand img{width:117px}.footer-support{padding:16px}.footer-support img{height:20.3px}.footer-copy,.footer-links{font-size:9px}.footer-links{align-items:flex-start;flex-direction:column;gap:12px}}
+@media(max-width:640px){.footer-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:20px}.footer-identity{padding-top:17px}.footer-identity .brand img{width:117px}.footer-support{padding:17px}.footer-support img{height:20.3px}.footer-copy,.footer-links{font-size:9px}.footer-links{align-items:flex-start;flex-direction:column;gap:12px}}
 @media(max-width:360px){.footer-layout{grid-template-columns:1fr;gap:24px}.footer-identity{padding-top:0}.footer-links{flex-direction:row;align-items:center}.footer-support{max-width:390px}}
 .media-dialog{width:min(1250px,94vw);max-height:94vh;border:1px solid var(--line);border-radius:12px;padding:20px;background:var(--paper);color:var(--ink)}.media-dialog::backdrop{background:#091c30bb;backdrop-filter:blur(6px)}.dialog-top{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:17px}.dialog-top p{font-size:14px}.media-dialog>img{max-height:72vh;width:100%;object-fit:contain}.media-dialog>.caption{margin-top:15px}.noscript-note{padding:18px;background:#dceee7;color:var(--ink);font-size:13px;text-align:center}.reveal{transition:opacity .65s var(--ease),transform .65s var(--ease)}.reveal.reveal-wait{opacity:.45;transform:translateY(16px)}.reveal.is-visible{opacity:1;transform:none}
 @media(min-width:1500px){.hero{padding-top:80px}.hero-visual{margin-right:-70px}.hero-visual>img{height:530px}}

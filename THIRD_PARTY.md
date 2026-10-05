@@ -22,3 +22,7 @@ Imagery, renders and Gaussian maps shown on this page are derived from the follo
 ## Page shell
 
 The HTML, CSS, JavaScript, local preview server, data manifests and maintenance utilities were authored for this website package. A final project-wide distribution license should be set by the project owner. No standalone font files or external font services are included.
+
+## AMD logo
+
+`assets/brand/amd-logo.svg` is the unmodified white AMD logo supplied by [AMD](https://www.amd.com/content/dam/code/images/header/amd-header-logo.svg). It accompanies the AMD University Program support acknowledgment. The AMD name and logo remain the property of Advanced Micro Devices, Inc.; this page does not relicense them.

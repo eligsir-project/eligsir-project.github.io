@@ -12,6 +12,8 @@ on:
       - 'data/**'
       - 'assets/**'
       - '.github/workflows/pages.yml'
+      - 'tests/**'
+      - 'tools/**'
 
 permissions:
   contents: read

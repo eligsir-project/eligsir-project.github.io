@@ -90,10 +90,10 @@ grep -q '"passed": true' <<<"$audit_output" || {
   exit 1
 }
 
-if rg -n --hidden --glob '!\.git/**' \
-  --glob '!tests/**' \
-  'assets/(css|js|img|results)(/|\\.)|assets/video/README\.md' \
-  .; then
+if grep -R -n -E --binary-files=without-match \
+  --exclude-dir=.git --exclude-dir=tests \
+  --exclude='*.sog' --exclude='*.mp4' \
+  'assets/(css|js|img|results)(/|\.)|assets/video/README\.md' .; then
   echo "references to obsolete placeholder assets remain" >&2
   exit 1
 fi

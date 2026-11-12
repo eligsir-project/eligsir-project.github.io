@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#f7faf9">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; connect-src 'self'; frame-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
-  <title>EliGSiR — A map. While you move.</title>
+  <title>EliGSiR — Continual RGB-D Gaussian Mapping</title>
   <link rel="icon" href="assets/brand/mark.svg" type="image/svg+xml">
   <link rel="icon" href="assets/brand/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
@@ -33,12 +33,11 @@
       <div class="hero-copy">
         <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Continual RGB-D Gaussian mapping</p>
         <h1 id="hero-title">Eli<span>GS</span>iR<span class="title-period">.</span></h1>
-        <p class="hero-statement">A map.<br> While you move.</p>
-        <p class="hero-description">Choose the next view. Adapt the detail.<br class="desktop-only"> Grow geometry where it is needed.</p>
+        <p class="hero-statement">Reconstructing scenes<br> from streaming RGB-D.</p>
+        <p class="hero-description">Adaptive view scheduling, supervision detail and geometry growth<br class="desktop-only"> under a bounded compute budget.</p>
         <a class="button primary" href="#video">Watch the overview <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
         <a class="button secondary" href="#explore">Explore in 3D</a>
         <a class="text-link" href="assets/paper/eligsir-anonymous.pdf">Paper (PDF) <span aria-hidden="true">↓</span></a>
-        <p class="hero-footnote">Anonymous ICRA 2027 submission</p>
       </div>
       <figure class="hero-visual">
         <img src="assets/real/hero-fr3-eligsir-render.webp" width="960" height="650" alt="EliGSiR rendering of an office scene from the TUM RGB-D fr3 sequence" fetchpriority="high">
@@ -231,21 +230,21 @@
 
     <section class="resources-section wrap section-space" id="paper" aria-labelledby="paper-title">
       <span id="resources" class="sr-only" aria-hidden="true"></span>
-      <div class="section-heading"><div><p class="eyebrow section-number">07 / PAPER &amp; CODE</p><h2 id="paper-title">Paper &amp; code</h2></div><p>Anonymous review version; code is released upon acceptance.</p></div>
+      <div class="section-heading"><div><p class="eyebrow section-number">07 / PAPER &amp; CODE</p><h2 id="paper-title">Paper &amp; code</h2></div><p>An anonymized research manuscript and supporting evaluation material. Code release is planned.</p></div>
       <div class="paper-card">
         <div class="paper-card-top"><span class="mini-label">PAPER</span><a class="button secondary" href="assets/paper/eligsir-anonymous.pdf">Paper (PDF, 1.3 MB) <span aria-hidden="true">↓</span></a></div>
-        <div class="bibtex-block"><pre tabindex="0" role="region" aria-label="BibTeX entry"><code id="bibtex-text">@misc{eligsir2027,
+        <div class="bibtex-block"><pre tabindex="0" role="region" aria-label="BibTeX entry"><code id="bibtex-text">@misc{eligsir2026,
   title  = {EliGSiR: Continual RGB-D Mapping with Gaussian Splatting under Bounded Compute},
   author = {Anonymous Authors},
-  year   = {2027},
-  note   = {Under review at IEEE ICRA 2027}
+  year   = {2026},
+  note   = {Anonymized research manuscript}
 }</code></pre><button class="button secondary" id="copy-bibtex">Copy BibTeX</button></div>
       </div>
       <span class="mini-label code-heading">CODE</span>
       <div class="resource-grid">
-        <article class="resource-card"><span class="mini-label">MAPPING CORE</span><div><h3>eligsir</h3></div><p>Gaussian mapping, adaptive supervision and replay.</p><span class="resource-tag">Released upon acceptance</span></article>
-        <article class="resource-card"><span class="mini-label">ROS 2 TRANSPORT</span><div><h3>eligsir-ros2</h3></div><p>ROS ingress, lifecycle and mapping integration.</p><span class="resource-tag">Released upon acceptance</span></article>
-        <article class="resource-card"><span class="mini-label">SENSOR SYNCHRONIZATION</span><div><h3>eligsir-rgbd-sync</h3></div><p>RGB-D synchronization and shared message contracts.</p><span class="resource-tag">Released upon acceptance</span></article>
+        <article class="resource-card"><span class="mini-label">MAPPING CORE</span><div><h3>eligsir</h3></div><p>Gaussian mapping, adaptive supervision and replay.</p><span class="resource-tag">Release planned</span></article>
+        <article class="resource-card"><span class="mini-label">ROS 2 TRANSPORT</span><div><h3>eligsir-ros2</h3></div><p>ROS ingress, lifecycle and mapping integration.</p><span class="resource-tag">Release planned</span></article>
+        <article class="resource-card"><span class="mini-label">SENSOR SYNCHRONIZATION</span><div><h3>eligsir-rgbd-sync</h3></div><p>RGB-D synchronization and shared message contracts.</p><span class="resource-tag">Release planned</span></article>
       </div>
       <p class="implementation-note">PyTorch + gsplat on CUDA or ROCm (incl. AMD Strix Halo), as a ROS 2 package; poses from ground truth, VO or a SLAM frontend.</p>
       <details class="scope-details"><summary>Scope &amp; limitations <span aria-hidden="true">＋</span></summary><p>Real-time operation depends on sustained workload and currently needs manual tuning of several runtime parameters. Representation size grows with the explored scene. The method assumes a predominantly static scene and a sufficiently consistent trajectory; pose errors, dynamic objects and unreliable depth can produce inconsistent geometry.</p></details>
@@ -255,7 +254,7 @@
     <div class="wrap footer-layout">
       <div class="footer-identity">
         <div class="footer-logo-row"><a href="#top" class="brand" aria-label="Back to EliGSiR home"><img src="assets/brand/logo-dark.svg" width="154" height="38" alt="EliGSiR" loading="lazy"></a></div>
-        <p class="footer-copy">Anonymous ICRA 2027 submission</p>
+        <p class="footer-copy">Continual RGB-D Gaussian mapping under bounded compute.</p>
         <div class="footer-links"><a href="THIRD_PARTY.md">Third-party notices <span aria-hidden="true">↗</span></a><a href="#top" class="back-top" aria-label="Back to top">↑</a></div>
       </div>
       <aside class="footer-support" aria-label="Research support">

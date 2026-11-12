@@ -1,23 +1,23 @@
 WEBVTT
 
 00:00:00.000 --> 00:00:17.000
-Title
+EliGSiR introduction
 
 00:00:17.000 --> 00:00:52.700
-Motivation
+Why online mapping must adapt
 
 00:00:52.700 --> 00:01:38.599
-Challenges
+Compute-budget trade-offs
 
 00:01:38.599 --> 00:02:41.500
-Method
+Three adaptive controls
 
 00:02:41.500 --> 00:03:26.300
-Observed views
+Observed-view quality
 
 00:03:26.300 --> 00:04:19.970
-Novel views
+Novel-view quality
 
 00:04:19.970 --> 00:05:46.670
-Live mapping demo
+Mapping as frames arrive
 

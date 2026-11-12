@@ -32,6 +32,9 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Validate public site, research assets and source-code links
+        run: bash tests/check.sh
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 

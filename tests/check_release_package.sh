@@ -134,7 +134,8 @@ source = "https://github.com/eligsir-project/eligsir-public"
 assert sum(link.get("href") == source for link in parsed.links) >= 3
 assert "Code release is planned." not in markup
 assert markup.count('<span class="resource-tag">Release planned</span>') == 2
-assert "GPU reproduction pending" in markup
+assert "Public source available" in markup
+assert "fully reproducible GPU environment has not yet been verified" in markup
 print("Public source link and release status validated")
 PY
 

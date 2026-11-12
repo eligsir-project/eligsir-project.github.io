@@ -2,6 +2,16 @@ name: Deploy static site to GitHub Pages
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'index.html'
+      - 'styles.css'
+      - 'app.js'
+      - 'data/**'
+      - 'assets/**'
+      - '.github/workflows/pages.yml'
 
 permissions:
   contents: read

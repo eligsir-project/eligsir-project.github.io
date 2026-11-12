@@ -1,6 +1,6 @@
 # EliGSiR project website
 
-A complete, self-hosted static research page for the anonymous ICRA 2027 submission. No build system, npm installation, analytics, externally loaded fonts or content delivery network is required. The 3D map exports are actual supplied Gaussian scenes, not generated mockups.
+A complete, self-hosted static research page for an anonymized manuscript and associated evaluation material. No build system, npm installation, analytics, externally loaded fonts or content delivery network is required. The 3D map exports are actual supplied Gaussian scenes, not generated mockups.
 
 ## Preview
 
@@ -23,7 +23,7 @@ The page requires HTTP serving for the 3D scenes. Opening `index.html` as a loca
 - Measured results: a real-time-factor scatter chart, an across-scenes accessible table, and a continued-refinement panel, all sourced from `assets/data/results.json` (the final paper's Tables I–III).
 - A "during mapping" section with the paper's CVQ/CUC regional-quality figures and the component-ablation table.
 - A qualitative comparison ("Look Closer") across four scene groups with an RGB/Depth wipe, side-by-side toggle, and a shared metric depth colorbar.
-- A paper card (PDF + BibTeX with a copy button) and three non-linked code-component cards tagged "Released upon acceptance".
+- A paper card (PDF + BibTeX with a copy button) and three non-linked code-component cards tagged "Release planned".
 - Mobile navigation, keyboard-operable tabs and controls, reduced-motion support, accessible tables and Escape-to-close dialogs.
 
 ## Edit
@@ -55,7 +55,7 @@ python3 tools/audit_site.py
 
 No Git history, credentials, private author metadata, original source archives or original-name assets are included. Public filenames are neutral and use the current project identity. Third-party notices are retained.
 
-Deployment runs only through the manual `Deploy static site to GitHub Pages` workflow.
+Deployment runs when site content changes are pushed to `main`, and can also be started manually using the `Deploy static site to GitHub Pages` workflow.
 
 For static hosting, upload `index.html`, `styles.css`, `app.js`, `data/`, `assets/`, `.nojekyll` and `THIRD_PARTY.md`. `serve.py`, `tools/` and `docs/` are authoring/support files and are not deployed; the Pages workflow copies only the files listed above.
 
@@ -66,3 +66,7 @@ Table I, the refinement study and the ablations in `assets/data/results.json` us
 ## Rights
 
 See `THIRD_PARTY.md` and `assets/viewer/LICENSE`. Scene/media rights and the final publication license remain the project owner's responsibility; this bundle does not relicense supplied research assets.
+
+## Review-anonymity guardrail
+
+The project homepage is linked from an active double-anonymous conference submission. Keep this publication-facing homepage free of author names, institutional affiliations, venue-acceptance claims, links to identifying public paper records, or other cross-references that would reveal the authors during review. A public CoRL/SISREN workshop announcement belongs on the workshop's own site or a separately hosted channel until the review is concluded. Public preprints are permissible under IEEE RAS rules, but linking an identifying page directly from reviewer-facing material is not. Request clarification from the ICRA program chairs if there is uncertainty about the existing URL in the submitted PDF.

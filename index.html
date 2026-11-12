@@ -65,7 +65,7 @@
     </section>
 
     <section class="video-section wrap section-space" id="video" aria-labelledby="video-title">
-      <div class="section-heading"><div><p class="eyebrow section-number">01 / OVERVIEW VIDEO</p><h2 id="video-title">Six minutes. The whole idea.</h2></div><p>A narrated overview: motivation, method and baseline comparisons on TUM fr3.</p></div>
+      <div class="section-heading"><div><p class="eyebrow section-number">01 / VIDEO WALKTHROUGH</p><h2 id="video-title">EliGSiR explained: continual mapping under a compute budget</h2></div><p>A six-minute walkthrough of the mapping challenge, EliGSiR's three adaptive controls, and comparisons on TUM RGB-D fr3.</p></div>
       <div class="video-grid">
         <div class="video-wrap">
           <video id="overview-video" controls playsinline preload="none" poster="assets/video/eligsir-overview-poster.webp" aria-label="EliGSiR overview video">
@@ -84,13 +84,13 @@
         <aside class="video-aside">
           <span class="mini-label">CHAPTERS</span>
           <div class="video-chapters" id="video-chapters">
-            <button class="video-chapter selected" data-time="0" aria-pressed="true"><span>0:00</span><strong>Title</strong></button>
-            <button class="video-chapter" data-time="17" aria-pressed="false"><span>0:17</span><strong>Motivation</strong></button>
-            <button class="video-chapter" data-time="52.7" aria-pressed="false"><span>0:52</span><strong>Challenges</strong></button>
-            <button class="video-chapter" data-time="98.599" aria-pressed="false"><span>1:38</span><strong>Method</strong></button>
-            <button class="video-chapter" data-time="161.5" aria-pressed="false"><span>2:41</span><strong>Observed views</strong></button>
-            <button class="video-chapter" data-time="206.3" aria-pressed="false"><span>3:26</span><strong>Novel views</strong></button>
-            <button class="video-chapter" data-time="259.97" aria-pressed="false"><span>4:19</span><strong>Live mapping demo</strong></button>
+            <button class="video-chapter selected" data-time="0" aria-pressed="true"><span>0:00</span><strong>EliGSiR introduction</strong></button>
+            <button class="video-chapter" data-time="17" aria-pressed="false"><span>0:17</span><strong>Why online mapping must adapt</strong></button>
+            <button class="video-chapter" data-time="52.7" aria-pressed="false"><span>0:52</span><strong>Compute-budget trade-offs</strong></button>
+            <button class="video-chapter" data-time="98.599" aria-pressed="false"><span>1:38</span><strong>Three adaptive controls</strong></button>
+            <button class="video-chapter" data-time="161.5" aria-pressed="false"><span>2:41</span><strong>Observed-view quality</strong></button>
+            <button class="video-chapter" data-time="206.3" aria-pressed="false"><span>3:26</span><strong>Novel-view quality</strong></button>
+            <button class="video-chapter" data-time="259.97" aria-pressed="false"><span>4:19</span><strong>Mapping as frames arrive</strong></button>
           </div>
           <button class="text-link" id="use-720p">Smaller file (720p, 19 MB) <span aria-hidden="true">↓</span></button>
         </aside>
@@ -99,7 +99,7 @@
     </section>
 
     <section class="explore-section wrap" id="explore" aria-labelledby="explore-title">
-      <div class="section-heading"><div><p class="eyebrow section-number">02 / EXPLORE</p><h2 id="explore-title">Step inside<br class="mobile-only"> the reconstruction.</h2></div><p>Explore actual Gaussian map exports in your browser.</p></div>
+      <div class="section-heading"><div><p class="eyebrow section-number">02 / INTERACTIVE RECONSTRUCTIONS</p><h2 id="explore-title">Explore Gaussian reconstructions<br class="mobile-only"> in 3D.</h2></div><p>Explore actual Gaussian map exports in your browser.</p></div>
       <div class="scene-strip" role="group" aria-label="Scene">
         <span class="mini-label">SCENE</span>
         <button class="scene-chip selected" data-scene="fr3" aria-pressed="true"><span>TUM fr3</span></button>
@@ -130,7 +130,7 @@
 
     <section class="method-section section-space" id="method" aria-labelledby="method-title">
       <div class="wrap">
-        <div class="section-heading"><div><p class="eyebrow section-number">03 / THE IDEA</p><h2 id="method-title">One budget. Three decisions.</h2></div></div>
+        <div class="section-heading"><div><p class="eyebrow section-number">03 / ADAPTIVE MAPPING</p><h2 id="method-title">Scheduling views, adapting fidelity, growing geometry.</h2></div></div>
         <figure class="wide-figure">
           <button class="figure-button flush" data-lightbox="assets/paper-figures/fig2-method.webp" data-caption="Method overview." aria-label="Expand method overview figure"><img src="assets/paper-figures/fig2-method.webp" width="2385" height="1058" alt="Method overview: retained observations, measured mapping cost and RGB-D evidence feed the three decisions" loading="lazy"></button>
           <span class="tap-hint">Tap to enlarge</span>
@@ -157,7 +157,7 @@
     </section>
 
     <section class="results-section wrap section-space" id="results" aria-labelledby="results-title">
-      <div class="section-heading"><div><p class="eyebrow section-number">04 / RESULTS</p><h2 id="results-title">Quality. And the time it takes.</h2></div></div>
+      <div class="section-heading"><div><p class="eyebrow section-number">04 / QUALITY VERSUS TIME</p><h2 id="results-title">Reconstruction quality versus wall-clock time.</h2></div></div>
       <div class="result-tabs" role="tablist" aria-label="Result view"><button id="tab-rtf" role="tab" aria-controls="panel-rtf" aria-selected="true" tabindex="0">Real-time factor (TUM fr3)</button><button id="tab-scenes" role="tab" aria-controls="panel-scenes" aria-selected="false" tabindex="-1">Across scenes</button><button id="tab-refinement" role="tab" aria-controls="panel-refinement" aria-selected="false" tabindex="-1">Continued refinement</button></div>
       <p class="caution-note">Table I, the refinement study and the ablations use separate runs and evaluation splits; absolute PSNR values should not be compared across these blocks.</p>
 
@@ -197,7 +197,7 @@
     </section>
 
     <section class="during-section wrap section-space" id="during" aria-labelledby="during-title">
-      <div class="section-heading"><div><p class="eyebrow section-number">05 / DURING MAPPING</p><h2 id="during-title">How soon is a region useful?</h2></div></div>
+      <div class="section-heading"><div><p class="eyebrow section-number">05 / REGIONAL MAP QUALITY</p><h2 id="during-title">How reconstruction quality evolves during mapping.</h2></div></div>
       <p>CVQ is mean PSNR over currently evaluable 0.5 m world-space cells, CUC@20 the fraction at or above 20 dB, and CVQ-AUC integrates CVQ over source progress, counting missing renders as failures.</p>
       <div class="during-grid">
         <article><button class="figure-button" data-lightbox="assets/paper-figures/fig4-cvq.svg" data-caption="CVQ over mapping time." aria-label="Expand CVQ over mapping time figure"><img src="assets/paper-figures/fig4-cvq.svg" alt="CVQ over mapping time, full method vs. ablations" loading="lazy"></button><p class="caption">Full method CVQ-AUC 21.18 dB vs. 20.62 dB w/o Load-Adaptive Fidelity and 20.84 dB w/o Targeted Geometry Growth (TUM fr3).</p></article>
@@ -211,7 +211,7 @@
     </section>
 
     <section class="compare-section section-space" id="compare" aria-labelledby="compare-title"><div class="wrap">
-      <div class="section-heading"><div><p class="eyebrow section-number">06 / LOOK CLOSER</p><h2 id="compare-title">See the difference.</h2></div><p>Drag the divider to inspect the paper's qualitative comparisons.</p></div>
+      <div class="section-heading"><div><p class="eyebrow section-number">06 / VISUAL COMPARISONS</p><h2 id="compare-title">Compare reconstructions at matched viewpoints.</h2></div><p>Drag the divider to inspect the paper's qualitative comparisons.</p></div>
       <div class="compare-toolbar">
         <div class="scene-strip" role="group" aria-label="Comparison group" id="compare-groups">
           <span class="mini-label">GROUP</span>
@@ -230,7 +230,7 @@
 
     <section class="resources-section wrap section-space" id="paper" aria-labelledby="paper-title">
       <span id="resources" class="sr-only" aria-hidden="true"></span>
-      <div class="section-heading"><div><p class="eyebrow section-number">07 / PAPER &amp; CODE</p><h2 id="paper-title">Paper &amp; code</h2></div><p>An anonymized research manuscript and supporting evaluation material. Code release is planned.</p></div>
+      <div class="section-heading"><div><p class="eyebrow section-number">07 / RESEARCH MATERIALS</p><h2 id="paper-title">Paper, evaluation material and code status</h2></div><p>An anonymized research manuscript and supporting evaluation material. Code release is planned.</p></div>
       <div class="paper-card">
         <div class="paper-card-top"><span class="mini-label">PAPER</span><a class="button secondary" href="assets/paper/eligsir-anonymous.pdf">Paper (PDF, 1.3 MB) <span aria-hidden="true">↓</span></a></div>
         <div class="bibtex-block"><pre tabindex="0" role="region" aria-label="BibTeX entry"><code id="bibtex-text">@misc{eligsir2026,

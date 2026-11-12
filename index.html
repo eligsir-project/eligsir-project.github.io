@@ -22,11 +22,11 @@
     <div class="nav-shell">
       <a href="#top" class="brand" aria-label="EliGSiR home"><img src="assets/brand/logo-light.svg" width="154" height="38" alt="EliGSiR"></a>
       <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="#video">Video</a><a href="#explore">Explore</a><a href="#method">Method</a><a href="#results">Results</a><a href="#compare">Compare</a><a href="#paper">Paper</a>
+        <a href="#video">Video</a><a href="#explore">Explore</a><a href="#method">Method</a><a href="#results">Results</a><a href="#compare">Compare</a><a href="#paper">Paper &amp; code</a>
       </nav>
-      <div class="nav-actions"><a href="assets/paper/eligsir-anonymous.pdf" class="nav-code" aria-label="Download the paper (PDF)">PDF <span aria-hidden="true">↓</span></a><button class="icon-button menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation"><span></span><span></span></button></div>
+      <div class="nav-actions"><a href="https://github.com/eligsir-project/eligsir-public" class="nav-code nav-code-source" target="_blank" rel="noopener noreferrer" aria-label="EliGSiR source code on GitHub">Code ↗</a><a href="assets/paper/eligsir-anonymous.pdf" class="nav-code" aria-label="Download the paper (PDF)">PDF <span aria-hidden="true">↓</span></a><button class="icon-button menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation"><span></span><span></span></button></div>
     </div>
-    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden><a href="#video">Video</a><a href="#explore">Explore</a><a href="#method">Method</a><a href="#results">Results</a><a href="#compare">Compare</a><a href="#paper">Paper</a></nav>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden><a href="#video">Video</a><a href="#explore">Explore</a><a href="#method">Method</a><a href="#results">Results</a><a href="#compare">Compare</a><a href="#paper">Paper &amp; code</a><a href="https://github.com/eligsir-project/eligsir-public" target="_blank" rel="noopener noreferrer">Source code ↗</a></nav>
   </header>
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
@@ -36,7 +36,8 @@
         <p class="hero-statement">Reconstructing scenes<br> from streaming RGB-D.</p>
         <p class="hero-description">Adaptive view scheduling, supervision detail and geometry growth<br class="desktop-only"> under a bounded compute budget.</p>
         <a class="button primary" href="#video">Watch the overview <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
-        <a class="button secondary" href="#explore">Explore in 3D</a>
+        <a class="button secondary" href="https://github.com/eligsir-project/eligsir-public" target="_blank" rel="noopener noreferrer">Source code ↗</a>
+        <a class="text-link" href="#explore">Explore in 3D</a>
         <a class="text-link" href="assets/paper/eligsir-anonymous.pdf">Paper (PDF) <span aria-hidden="true">↓</span></a>
       </div>
       <figure class="hero-visual">
@@ -230,7 +231,7 @@
 
     <section class="resources-section wrap section-space" id="paper" aria-labelledby="paper-title">
       <span id="resources" class="sr-only" aria-hidden="true"></span>
-      <div class="section-heading"><div><p class="eyebrow section-number">07 / RESEARCH MATERIALS</p><h2 id="paper-title">Paper, evaluation material and code status</h2></div><p>An anonymized research manuscript and supporting evaluation material. Code release is planned.</p></div>
+      <div class="section-heading"><div><p class="eyebrow section-number">07 / RESEARCH MATERIALS</p><h2 id="paper-title">Paper, source code and evaluation</h2></div><p>The mapping core is publicly available. GPU reproduction remains under qualification; ROS 2 and sensor integrations are separate projects.</p></div>
       <div class="paper-card">
         <div class="paper-card-top"><span class="mini-label">PAPER</span><a class="button secondary" href="assets/paper/eligsir-anonymous.pdf">Paper (PDF, 1.3 MB) <span aria-hidden="true">↓</span></a></div>
         <div class="bibtex-block"><pre tabindex="0" role="region" aria-label="BibTeX entry"><code id="bibtex-text">@misc{eligsir2026,
@@ -242,11 +243,11 @@
       </div>
       <span class="mini-label code-heading">CODE</span>
       <div class="resource-grid">
-        <article class="resource-card"><span class="mini-label">MAPPING CORE</span><div><h3>eligsir</h3></div><p>Gaussian mapping, adaptive supervision and replay.</p><span class="resource-tag">Release planned</span></article>
+        <article class="resource-card"><span class="mini-label">MAPPING CORE</span><div><h3><a class="resource-title-link" href="https://github.com/eligsir-project/eligsir-public" target="_blank" rel="noopener noreferrer">eligsir-public ↗</a></h3></div><p>Streaming Gaussian mapping, adaptive supervision and replay. Explore the source, installation instructions and release notes.</p><a class="resource-link" href="https://github.com/eligsir-project/eligsir-public" target="_blank" rel="noopener noreferrer">View code on GitHub ↗</a><span class="resource-tag">Public source · GPU reproduction pending</span></article>
         <article class="resource-card"><span class="mini-label">ROS 2 TRANSPORT</span><div><h3>eligsir-ros2</h3></div><p>ROS ingress, lifecycle and mapping integration.</p><span class="resource-tag">Release planned</span></article>
         <article class="resource-card"><span class="mini-label">SENSOR SYNCHRONIZATION</span><div><h3>eligsir-rgbd-sync</h3></div><p>RGB-D synchronization and shared message contracts.</p><span class="resource-tag">Release planned</span></article>
       </div>
-      <p class="implementation-note">PyTorch + gsplat on CUDA or ROCm (incl. AMD Strix Halo), as a ROS 2 package; poses from ground truth, VO or a SLAM frontend.</p>
+      <p class="implementation-note">The standalone core uses PyTorch and gsplat with CUDA/ROCm backends. ROS 2 deployment is a separate integration, not part of this source release. The public core is a research snapshot; its pinned ROCm fork remains private and a fully reproducible GPU environment has not yet been verified.</p>
       <details class="scope-details"><summary>Scope &amp; limitations <span aria-hidden="true">＋</span></summary><p>Real-time operation depends on sustained workload and currently needs manual tuning of several runtime parameters. Representation size grows with the explored scene. The method assumes a predominantly static scene and a sufficiently consistent trajectory; pose errors, dynamic objects and unreliable depth can produce inconsistent geometry.</p></details>
     </section>
   </main>

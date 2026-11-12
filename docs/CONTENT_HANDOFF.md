@@ -34,7 +34,7 @@ After editing manifests, run `python3 tools/update_data.py`. Use `python3 tools/
 
 ## Browser behavior
 
-Media never automatically trains or modifies the map. The heavy model and renderer load only when selected; the video uses `preload="none"`. The viewer uses an isolated iframe with local source/data and a same-origin message contract (`eligsir-viewer-ready` / `eligsir-viewer-error` / `eligsir-viewer-reset`, plus `requestFullscreen`/`exitFullscreen`). The page has no external runtime dependencies; repository and notice links are ordinary outbound links, and the three code-component cards are intentionally non-links, tagged "Released upon acceptance".
+Media never automatically trains or modifies the map. The heavy model and renderer load only when selected; the video uses `preload="none"`. The viewer uses an isolated iframe with local source/data and a same-origin message contract (`eligsir-viewer-ready` / `eligsir-viewer-error` / `eligsir-viewer-reset`, plus `requestFullscreen`/`exitFullscreen`). The page has no external runtime dependencies; repository and notice links are ordinary outbound links, and the mapping-core card links to the public `eligsir-project/eligsir-public` source snapshot. The ROS 2 and synchronization cards remain non-links, tagged "Release planned". Public source availability does not imply GPU reproduction readiness.
 
 `prefers-reduced-motion` disables decorative movement. Explanatory states remain operable, and no continuous animation is required to read content. The static content, comparison defaults and numeric tables remain visible without JavaScript; enhanced controls require it.
 

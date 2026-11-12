@@ -209,3 +209,11 @@ th,td{padding:8px 15px}
   .resource-card h3{font-size:18px;margin:4px 0}
   .resource-card .resource-tag{margin-top:6px}
 }
+
+/* Public mapping-core link; preserve resource-card layout and keyboard focus. */
+.resource-title-link{color:inherit;text-decoration:none;text-underline-offset:3px}
+.resource-title-link:hover,.resource-title-link:focus-visible{color:var(--brand-dark);text-decoration:underline}
+.resource-link{display:inline-block;margin-top:13px;font-size:12px;font-weight:650;color:var(--brand-dark);text-decoration:underline;text-underline-offset:4px}
+.resource-link:hover{color:var(--brand)}
+.resource-link:focus-visible,.nav-code-source:focus-visible{outline:2px solid var(--brand);outline-offset:4px}
+@media(max-width:540px){.nav-code-source{font-weight:650}.nav-actions{gap:12px}}

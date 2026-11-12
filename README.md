@@ -23,7 +23,7 @@ The page requires HTTP serving for the 3D scenes. Opening `index.html` as a loca
 - Measured results: a real-time-factor scatter chart, an across-scenes accessible table, and a continued-refinement panel, all sourced from `assets/data/results.json` (the final paper's Tables I–III).
 - A "during mapping" section with the paper's CVQ/CUC regional-quality figures and the component-ablation table.
 - A qualitative comparison ("Look Closer") across four scene groups with an RGB/Depth wipe, side-by-side toggle, and a shared metric depth colorbar.
-- A paper card (PDF + BibTeX with a copy button) and three non-linked code-component cards tagged "Release planned".
+- A paper card (PDF + BibTeX with a copy button), a direct link to the [public EliGSiR mapping-core source](https://github.com/eligsir-project/eligsir-public), and two separate integration cards marked "Release planned". GPU reproduction is still unqualified.
 - Mobile navigation, keyboard-operable tabs and controls, reduced-motion support, accessible tables and Escape-to-close dialogs.
 
 ## Edit
